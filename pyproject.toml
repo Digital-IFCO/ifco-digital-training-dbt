@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ifco-digital-training-dbt"
+version = "0.1.0"
+description = ""
+authors = ["IFCO Digital Tech Team <digitaltechteam@ifco.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+databricks = "^0.2"
+dbt-core = "^1.8.4"
+dbt-databricks = "^1.8.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
