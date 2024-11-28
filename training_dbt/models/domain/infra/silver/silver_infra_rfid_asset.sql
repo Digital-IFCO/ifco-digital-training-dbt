@@ -1,2 +1,30 @@
+{{ config(materialized="view") }}
 
-select
+with asset as (SELECT Id                        AS id,
+                      IsOnSite                  AS is_on_site,
+                      TagId                     AS tag_id,
+                      AssetGroupId              AS asset_group_id,
+                      HomeSiteId                AS home_site_id,
+                      UserDefinedAttribute1     AS user_defined_attribute1,
+                      UserDefinedAttribute2     AS user_defined_attribute2,
+                      UserDefinedAttribute3     AS user_defined_attribute3,
+                      UserDefinedValue          AS user_defined_value,
+                      DateDisabled              AS date_disabled,
+                      OnSiteChanged             AS on_site_changed,
+                      OnSiteSeen                AS on_site_seen,
+                      DateCreated               AS date_created,
+                      UserDefinedAttribute4     AS user_defined_attribute4,
+                      UserDefinedAttribute5     AS user_defined_attribute5,
+                      LastAssetLocationId       AS last_asset_location_id,
+                      LastAssetStatusHistoryId  AS last_asset_status_history_id,
+                      LastAssetShipmentDetailId AS last_asset_shipment_detail_id,
+                      Id_cleansed               AS id_cleansed,
+                      Asset_SID                 AS asset_sid,
+                      columnHash_DLS            AS column_hash_dls,
+                      sourceFile                AS source_file,
+                      historyStatus             AS history_status,
+                      deletedFlg                AS deleted_flg,
+                      validFrom_DLS             AS valid_from_dls,
+                      validTo_DLS               AS valid_to_dls
+               FROM {{ source('rtina_adls_data', 'asset') }})
+select * from asset

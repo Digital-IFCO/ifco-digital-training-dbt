@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: rtina_adls_data
+    database: lake_legacy
+    schema: silver_rtina
+    description: This stores all RTINA data from ADLS
+    tables:
+      - name: asset
+        description: "This table contains the individual assets in the system. Each asset is assigned to an Asset Group. For
+          example: 'Rack 001' would be part of the 'Steel Racks' group"
