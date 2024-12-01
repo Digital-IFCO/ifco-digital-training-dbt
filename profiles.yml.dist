@@ -1,0 +1,10 @@
+training_dbt:
+  outputs:
+    dev:
+      catalog: training_dbt
+      host: adb-1149589327075054.14.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/DBX_WAREHOUSE_ID
+      schema: YOUR_NAME
+      token: DBX_TOKEN
+      type: databricks
+  target: dev

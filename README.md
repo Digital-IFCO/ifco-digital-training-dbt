@@ -21,7 +21,13 @@ We use Poetry to manage code dependencies and virtual environments. So the first
 
 **_https://python-poetry.org/docs/#installation_**
 
-Then just install dependencies 👇
+Install the dependencies 👇
 
     poetry install
+
+Enable the poetry shell by:
+
+    poetry shell
+
+
 
