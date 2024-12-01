@@ -1,33 +1,30 @@
-# DBT training
+# DBT Training
+
+Welcome to the DBT Training Repository! 🎉
+
+This repository is your hands-on guide to mastering DBT (Data Build Tool) for building scalable and maintainable data pipelines. Whether you’re new to DBT or looking to deepen your understanding, this training is focused on teaching you how to use DBT effectively to transform and model data.
+
+Through this training, you’ll learn how to:
+ - Build and manage DBT models for modular, testable SQL.
+ - Apply best practices for organizing and structuring DBT projects.
+ - Leverage DBT features like tests, macros, and incremental models.
+ - Debug and optimize transformations using DBT commands and logs.
+ - Collaborate effectively by version-controlling your DBT project.
+
+The included setup instructions are a quick start to ensure your development environment is ready for DBT workflows. Once set up, the training will dive straight into real-world use cases and examples.
+
+Let’s get started and take your data transformation skills to the next level! 🚀
 
 ### Set up the development environment
 
-#### Installing the python version
+#### Step 1:
 
-The first thing you will need to run the code is a python binary needed to run python code and all the related tools. For this the best way to manage Python is through **pyenv**. Find installation instructions in the link below
+**[INSTALL PYTHON USING PYENV](docs/INSTALL_PYTHON.md)**
 
-* From Mac / Linux devs 👉 **https://github.com/pyenv/pyenv?tab=readme-ov-file#installation**
-* For Windows devs 👉 **https://github.com/pyenv-win/pyenv-win**
+#### Step 2:
 
-Once installed, then just install the version needed and specified in the `.python-version` file
+**[INSTALL POETRY](docs/INSTALL_POETRY.md)**
 
-    pyenv install
+#### Step 3:
 
-Verify that you have successfully installed the correct python version (`v3.11`):
-
-    python --version
-
-We use Poetry to manage code dependencies and virtual environments. So the first thing you should do is installing Poetry 👇
-
-**_https://python-poetry.org/docs/#installation_**
-
-Install the dependencies 👇
-
-    poetry install
-
-Enable the poetry shell by:
-
-    poetry shell
-
-
-
+**[CONFIGURE IDE](docs/CONFIGURE_IDE.md)**
