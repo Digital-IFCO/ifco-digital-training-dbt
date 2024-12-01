@@ -1,15 +1,27 @@
-Welcome to your new dbt project!
+# DBT training
 
-### Using the starter project
+### Set up the development environment
 
-Try running the following commands:
-- dbt run
-- dbt test
+#### Installing the python version
 
+The first thing you will need to run the code is a python binary needed to run python code and all the related tools. For this the best way to manage Python is through **pyenv**. Find installation instructions in the link below
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+* From Mac / Linux devs 👉 **https://github.com/pyenv/pyenv?tab=readme-ov-file#installation**
+* For Windows devs 👉 **https://github.com/pyenv-win/pyenv-win**
+
+Once installed, then just install the version needed and specified in the `.python-version` file
+
+    pyenv install
+
+Verify that you have successfully installed the correct python version (`v3.11`):
+
+    python --version
+
+We use Poetry to manage code dependencies and virtual environments. So the first thing you should do is installing Poetry 👇
+
+**_https://python-poetry.org/docs/#installation_**
+
+Then just install dependencies 👇
+
+    poetry install
+
