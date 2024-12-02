@@ -1,0 +1,7 @@
+Id,Name,Description,validFrom_DLS,validTo_DLS
+a46b007b-68ae-eb11-a7ad-501ac5862c09,Clean,Asset has been scanned at the wrap station after scanned at wash station,2022-11-15T04:34:06.000Z,9999-12-31T23:59:59.999Z
+05d12668-68ae-eb11-a7ad-501ac5862c09,Washed,Asset has been scanned entering the washlines,2022-11-15T04:34:06.000Z,9999-12-31T23:59:59.999Z
+09aab1b0-ceae-ec11-997e-501ac5865642,Received,Received to Trendz SA Inbound Portal 1,2022-11-15T04:34:06.000Z,9999-12-31T23:59:59.999Z
+eb5ade50-68ae-eb11-a7ad-501ac5862c09,Shipped,Asset has been shipped externally,2022-11-15T04:34:06.000Z,9999-12-31T23:59:59.999Z
+7b97a28b-68ae-eb11-a7ad-501ac5862c09,Re - Washed,Asset scanned again at wash station (re-run),2022-11-15T04:34:06.000Z,9999-12-31T23:59:59.999Z
+b7678f5b-68ae-eb11-a7ad-501ac5862c09,Dirty,Asset has been scanned from an inbound shipment,2022-11-15T04:34:06.000Z,9999-12-31T23:59:59.999Z
