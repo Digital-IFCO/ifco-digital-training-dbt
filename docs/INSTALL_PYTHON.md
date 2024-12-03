@@ -13,6 +13,6 @@ Verify that you have successfully installed the correct python version (`v3.11`)
 
     python --version
 
-If not, use the pyenv CLI to set the python PATH in your session:
+If not, use the pyenv CLI to set the python PATH in your SHELL session:
 
     pyenv shell 3.11.10

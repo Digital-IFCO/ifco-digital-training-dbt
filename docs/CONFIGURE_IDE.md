@@ -8,13 +8,10 @@ Append `/bin/python` to the path and add it to the IDE:
 
  - [IntelliJ tutorial](https://www.jetbrains.com/help/idea/configuring-python-sdk.html#-7tt9nh_91)
  - [PyCharm tutorial](https://www.jetbrains.com/help/pycharm/poetry.html#existing-poetry-environment)
-
-Among other things, everytime you open a terminal you should see the env activated
-
-![Poetry shell](imgs/shell.png)
+ - [VS Code tutorial](https://code.visualstudio.com/docs/python/environments#_working-with-python-interpreters)
 
 If you are working with PyCharm, you can set the DBT path:
 
  - [Config DBT for PyCharm](https://www.jetbrains.com/help/pycharm/create-and-configure-dbt-project.html#configure-data-source)
 
-Just add the DBT path and click Apply, do not configure a data source
+Just add the DBT path and click Apply (do not configure a data source as no schema will be detected)
