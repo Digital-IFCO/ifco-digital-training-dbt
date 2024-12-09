@@ -3,8 +3,9 @@ training_dbt:
     dev:
       catalog: training_dbt
       host: adb-1149589327075054.14.azuredatabricks.net
-      http_path: /sql/1.0/warehouses/DBX_WAREHOUSE_ID
-      schema: YOUR_NAME
-      token: DBX_TOKEN
+      http_path: /sql/1.0/warehouses/your_warehouse_id
+      schema: your_name
+      threads: 1
+      token: your_token
       type: databricks
   target: dev
