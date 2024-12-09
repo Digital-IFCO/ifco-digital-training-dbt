@@ -1,53 +1,59 @@
 # Session 1 
 
-## Intro to DBT project
+Welcome to the first session of this DBT course! 
 
-- Overview of the directory
-  - Explain purpose of each directory
-  - Explain how DBT parses models, sources and seeds
-  - Explain target directory 
-  - Explain macros directory
-- Review `dbt_project.yml`
-- Review `profiles.yml`
+This document serves as a comprehensive guide to setting up and working with DBT (Data Build Tool) on Databricks. It covers essential steps, best practices, and real-world examples to help you understand and implement a modern data transformation workflow.
 
-### 1) Populate the database with seed data
+You’ll start with an overview of the DBT project structure, learn how to configure connections to Databricks, and explore the process of building different layers (bronze, silver, and gold). This guide also includes instructions for testing models, documenting your work, and optimizing the data pipeline for better performance and maintainability.
 
-```bash
-$ dbt seed
-```
+By the end of this session we will be able to model the following data lineage:
 
-- Explore the tables created
+![lineage](../../imgs/lineage.png)
 
-### 2) Create the staging models from the seed tables
+# Table of Contents
 
-- Standarize column naming (ids, lowercase, casting, etc ...)
-- Separate DateTime into 2 colums
-- Explore the tables created
+1. [Intro to DBT Project](#1-intro-to-dbt-project)
+   - [Overview of the directory](#overview-of-the-directory)
+   - [Review `dbt_project.yml`](#review-dbt_projectyml)
+   - [Overview of DBT CLI commands](#review-dbt_projectyml)
+2. [Setup Databricks Connection in DBT](#2-setup-databricks-connection-in-dbt)
+3. [Populate the Database with Seed Data](#3-populate-the-database-with-seed-data)
+4. [Define the Project Sources](#4-define-the-project-sources)
+5. [Define the Bronze Layer](#5-define-the-bronze-layer)
+6. [Define the Silver Layer](#5-define-the-silver-layer)
+7. [Create Intermediate Models in the Silver Layer](#6-create-the-intermediate-models-in-the-silver-layer)
+   - [Model 1: ASH + Status Name](#model-1-ash--status-name)
+   - [Model 2: Portal List + Site Table](#model-2-portal-list--site-table)
+8. [Create the Gold Model](#7-create-the-gold-model)
+9. [Create the Documentation for the Gold Model](#8-create-the-documentation-for-the-gold-model)
+10. [Add Tests to the Models](#9-add-tests-to-the-models)
+11. [Additional References](#additional-references)
 
-### 3) Define sources from the original lake legacy data
 
-- Define the source YAML
-- Add a description to each source
+### 1) Intro to DBT project
 
-### 4) Refactor staging models to use sources instead of data from the seeds 
+### 2) Setup Databricks connection in DBT
 
-- Use source key to reference the new data origin
+### 3) Populate the database with seed data
 
-### 5) Create the intermediate models
+### 4) Define the project sources 
 
-- Model 1: ASH + Status name
-- Model 2: Portal setup - Non-matching Portal IDs
-- Model 3: Model 2 + Site table
+### 5) Define the bronze layer
 
-### 6) Create the mart model
+### 6) Define the silver layer
 
-- Model 1 + Model 3 = Enriched Asset Status History
+### 7) Create the intermediate models in the silver layer
 
-### 7) Add tests to the models
+### 8) Create the gold model
 
- - Data tests
- - Unit tests
- - Singular tests
+### 9) Create the documentation for the gold model 
 
-### 8) Create the documentation from the models and tests 
+### 10) Add tests to the models
 
+## Additional references
+
+- [How to: DBT SQL Models](https://docs.getdbt.com/docs/build/sql-models)
+- [How to: DBT Python Models](https://docs.getdbt.com/docs/build/python-models)
+- [Setup Your DBT project with Databricks](https://docs.getdbt.com/guides/set-up-your-databricks-dbt-project?step=1)
+- [Optimize and troubleshoot dbt models on Databricks](https://docs.getdbt.com/guides/optimize-dbt-models-on-databricks?step=1)
+- [Refactoring Legacy SQL code to DBT](https://docs.getdbt.com/guides/refactoring-legacy-sql?step=1)
