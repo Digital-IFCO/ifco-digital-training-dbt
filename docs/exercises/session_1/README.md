@@ -37,8 +37,6 @@ You’ll start with an overview of the DBT project structure, learn how to confi
  - Creating our first model
    - Example 1:
    - Example 2:
- - Intro about DBT internal macro `{{ ref('') }}` `(ppt)`
- - Refactor models to include ref macro
 
 #### Exercise with a volunteer: Create a model
 
@@ -69,6 +67,7 @@ You’ll start with an overview of the DBT project structure, learn how to confi
 ### 6) Seeds and sources
 
  - Seeds and sources overview `(ppt)`
+ - Intro about DBT internal macro `{{ ref('') }}` `(ppt)`
  - Copy some files to seeds folder
    - Use `dbt seed` to create seeds in the DWH
 
