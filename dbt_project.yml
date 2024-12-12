@@ -36,3 +36,5 @@ models:
     +materialized: view
     src:
       +materialized: table
+    mart:
+      +materialized: table

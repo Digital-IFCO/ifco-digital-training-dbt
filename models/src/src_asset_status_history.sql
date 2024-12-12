@@ -9,7 +9,7 @@
 with raw_asset_status_history as (
     select *
     from {{ source('rtina_adls_data', 'assetstatushistory') }}
-    where validFrom_DLS between '2024-11-01' and '2024-11-15'
+    where validFrom_DLS between '2023-11-01' and '2024-11-15'
 )
 
 select

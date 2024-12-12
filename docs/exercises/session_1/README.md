@@ -83,7 +83,15 @@ You’ll start with an overview of the DBT project structure, learn how to confi
  - Declare the new sources
  - Refactor previous models to take data from seeds and sources instead of using raw schema
 
-### 7) Tests
+### 7) End the modeling by creating the final mart model
+
+ - Show how to combine everything into a presentation model to be consumed
+
+#### Exercise with a volunteer: Create a new Mart model: Asset Cycles
+
+ - Create another mart model called Asset Cycles
+
+### 8) Tests
 
  - Tests overview `(ppt)`
  - Define generic tests for a model
@@ -97,7 +105,7 @@ You’ll start with an overview of the DBT project structure, learn how to confi
  - Define a unit test for the selected model
  - Check that tests pass
 
-### 8) Documentation
+### 9) Documentation
 
  - Documentation overview `(ppt)`
    - Docs very close to the code
@@ -118,6 +126,6 @@ You’ll start with an overview of the DBT project structure, learn how to confi
  - Create documentation for a single model
  - Explore documentation with the built-in local server
 
-### 9) DBT CLI
+### 10) DBT CLI
 
  - Overview of DBT cli commands and the different use cases `(ppt)`
