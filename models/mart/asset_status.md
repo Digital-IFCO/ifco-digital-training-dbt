@@ -9,6 +9,7 @@ The `asset_status` model is an **ephemeral** model that enhances the asset statu
 
 This model adds human-readable status details (`status_name` and `status_description`) to the asset status history for better usability.
 
+---
 
 ## Logic
 1. Fetches asset status history from `src_asset_status_history`.
