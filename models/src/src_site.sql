@@ -1,7 +1,7 @@
 with raw_site as (
     select *
     from training_dbt.raw.raw_site
-    where validFrom_DLS between '2024-11-01' and '2024-11-15'
+    where validFrom_DLS between '2021-01-01' and '2022-12-31'
 )
 
 select
