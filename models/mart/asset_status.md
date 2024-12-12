@@ -9,20 +9,6 @@ The `asset_status` model is an **ephemeral** model that enhances the asset statu
 
 This model adds human-readable status details (`status_name` and `status_description`) to the asset status history for better usability.
 
----
-
-## Schema
-
-| Column                     | Type    | Description                                    |
-|----------------------------|---------|------------------------------------------------|
-| `asset_status_history_id`  | Integer | Unique identifier for the asset status history.|
-| `asset_status_history_date`| Date    | Date of the asset status history event.        |
-| `portal_id`                | Integer | Identifier for the portal associated with the asset status. |
-| `asset_id`                 | Integer | Unique identifier for the asset.              |
-| `status_name`              | String  | Name of the asset status.                     |
-| `status_description`       | String  | Description of the asset status.              |
-
----
 
 ## Logic
 1. Fetches asset status history from `src_asset_status_history`.

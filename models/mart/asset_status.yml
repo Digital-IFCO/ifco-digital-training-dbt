@@ -2,3 +2,16 @@ version: 2
 models:
   - name: asset_status
     description: "{{ doc('asset_status') }}"
+    columns:
+      - name: asset_status_history_id
+        description: Unique identifier for the asset status history.
+      - name: asset_status_history_date
+        description: Date of the asset status history event.
+      - name: site_name
+        description: Name of the site associated with the portal.
+      - name: asset_id
+        description: Unique identifier for the asset.
+      - name: status_name
+        description: Name of the asset status.
+      - name: status_description
+        description: Description of the asset status.
