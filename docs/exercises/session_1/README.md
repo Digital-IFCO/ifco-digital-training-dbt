@@ -50,12 +50,16 @@ You’ll start with an overview of the DBT project structure, learn how to confi
    - Table
    - Incremental
    - Ephemeral
- - Show how DBT can handle view, table and ephemeral materializations
-   - Use of config key in Jinja SQL file
+ - Show how DBT can handle view, table and ephemeral materializations:
+   - As a project-level
+   - In a Model
  - Create a first incremental model
    - Create the model and run DBT to generate the table in the DWH
    - Simulate to add new incoming data in the source model
    - Re-run incremental model and show how the new data has been added incrementally
+ - Intro about DBT internal macro `{{ ref('') }}` `(ppt)`
+ - Create an ephemeral model in the intermediate layer
+   - Show that ephemeral model does not materialize and execution is fast
 
 #### Exercise with a volunteer: Create a new incremental model
 
@@ -67,7 +71,6 @@ You’ll start with an overview of the DBT project structure, learn how to confi
 ### 6) Seeds and sources
 
  - Seeds and sources overview `(ppt)`
- - Intro about DBT internal macro `{{ ref('') }}` `(ppt)`
  - Copy some files to seeds folder
    - Use `dbt seed` to create seeds in the DWH
 
