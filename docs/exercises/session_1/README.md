@@ -38,7 +38,7 @@ You’ll start with an overview of the DBT project structure, learn how to confi
    - Example 1:
    - Example 2:
  - Intro about DBT internal macro `{{ ref('') }}` `(ppt)`
- - Refactor models to include ref macro
+ - Refactor models to include ref macro 
 
 #### Exercise with a volunteer: Create a model
 
