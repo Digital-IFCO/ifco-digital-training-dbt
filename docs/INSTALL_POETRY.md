@@ -6,6 +6,6 @@ and open it again and run `python --version` to see that you are using python ve
     
     pip install poetry
 
-Install the dependencies in the root path of this Project  👇
+Install the dependencies in the root path of this Project. For that, please, clone the Github project  👇
 
     poetry install
