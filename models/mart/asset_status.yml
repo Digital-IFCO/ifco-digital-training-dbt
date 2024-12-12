@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: asset_status
+    description: This model combines the asset status history metadata with the portal site metadata.
+      It joins data from the `int_asset_status_history_enhanced_asset_status` and
+      `int_portal_list_enhanced` models to provide a comprehensive view of asset statuses
+      along with their associated portal sites.
+    columns:
+      - name: asset_status_history_id
+        description: Unique identifier for the asset status history.
+      - name: asset_status_history_date
+        description: Date of the asset status history event.
+      - name: site_name
+        description: Name of the site associated with the portal.
+      - name: asset_id
+        description: Unique identifier for the asset.
+      - name: status_name
+        description: Name of the asset status.
+      - name: status_description
+        description: Description of the asset status.

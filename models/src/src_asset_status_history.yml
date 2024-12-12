@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: src_asset_status_history
+    description: Incremental model that generates an asset status history from status history filtered by A
+    columns:
+      - name: asset_status_history_id
+        description: Unique identifier for each asset status history record
+      - name: asset_id
+        description: Identifier for the asset
+      - name: asset_status_id
+        description: Identifier for the status
+      - name: portal_id
+        description: Portal identifier where the shipment was scanned
+      - name: asset_status_history_date
+        description: Date of the asset status history event
+      - name: ingestion_date
+        description: Date of the Ingestion
