@@ -8,7 +8,7 @@
 
 with raw_asset_status_history as (
     select *
-    from training_dbt.raw.raw_asset_status_history
+    from {{ source('rtina_adls_data', 'assetstatushistory') }}
     where validFrom_DLS between '2024-11-01' and '2024-11-15'
 )
 

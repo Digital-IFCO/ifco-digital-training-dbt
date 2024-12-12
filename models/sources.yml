@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: rtina_adls_data
+    catalog: lake_legacy
+    schema: silver_rtina
+    description: This source references all RTINA data from ADLS
+    tables:
+      - name: assetstatushistory
+        description: "This table stores the status history for an asset"
+      - name: site
+        description: "This table represents all entities with an address"
