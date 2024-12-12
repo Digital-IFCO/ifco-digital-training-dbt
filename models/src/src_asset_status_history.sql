@@ -9,7 +9,7 @@
 with raw_asset_status_history as (
     select *
     from training_dbt.raw.raw_asset_status_history
-    where validFrom_DLS between '2024-11-01' and '2024-11-18'
+    where validFrom_DLS between '2024-11-01' and '2024-11-15'
 )
 
 select
