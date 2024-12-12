@@ -65,8 +65,10 @@ You’ll start with an overview of the DBT project structure, learn how to confi
 
  - Share the exercise objective `(ppt)`
  - Create a 2nd incremental model
- - Simulate incoming of new data to the source model
- - Re-run incremental model and look for the differences
+   - Simulate incoming of new data to the source model
+   - Re-run incremental model and look for the differences
+ - Create a 2nd ephemeral model
+ - Run DBT to view that everything works as expected and inspect the results
 
 ### 6) Seeds and sources
 
