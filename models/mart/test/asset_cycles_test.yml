@@ -1,0 +1,27 @@
+unit_tests:
+  - name: test_cycle_duration_validity
+    description: "Validate that the cycle duration is correctly calculated as the difference between the earliest and latest asset_status_history_date for each asset_id."
+    model: asset_cycles
+    given:
+      - input: ref('asset_status')
+        rows:
+          - asset_status_history_date: '2024-01-01T00:00:00'
+            asset_id: 'A1'
+          - asset_status_history_date: '2024-01-03T00:00:00'
+            asset_id: 'A1'
+          - asset_status_history_date: '2024-01-05T00:00:00'
+            asset_id: 'A1'
+          - asset_status_history_date: '2024-02-01T00:00:00'
+            asset_id: 'A2'
+          - asset_status_history_date: '2024-02-01T00:00:00'
+            asset_id: 'A2'
+    expect:
+      rows:
+        - asset_id: 'A1'
+          cycle_start_date: '2024-01-01T00:00:00'
+          cycle_end_date: '2024-01-05T00:00:00'
+          cycle_duration: 4
+        - asset_id: 'A2'
+          cycle_start_date: '2024-02-01T00:00:00'
+          cycle_end_date: '2024-02-01T00:00:00'
+          cycle_duration: 0

@@ -5,8 +5,13 @@ models:
     columns:
       - name: asset_status_history_id
         description: Unique identifier for each asset status history record
+        tests:
+          - not_null
+          - unique
       - name: asset_id
         description: Identifier for the asset
+        tests:
+          - not_null
       - name: asset_status_id
         description: Identifier for the status
       - name: portal_id

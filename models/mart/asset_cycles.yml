@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: asset_cycles
+    description: > 
+      This model calculates the lifecycle duration of assets based on their status history. It identifies 
+      the earliest and latest status dates for each asset and computes the duration of the cycle.
+    columns:
+      - name: asset_id
+        description: Unique identifier for each asset.
+        tests:
+          - not_null
+          - unique
+      - name: cycle_start_date
+        description: The earliest date in the asset's status history, marking the start of its lifecycle.
+        tests:
+          - not_null
+      - name: cycle_end_date
+        description: The latest date in the asset's status history, marking the end of its lifecycle.
+        tests:
+          - not_null
+      - name: cycle_duration
+        description: The number of days between the start and end dates of the asset's lifecycle.
+        tests:
+          - not_null

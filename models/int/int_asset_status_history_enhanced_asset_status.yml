@@ -1,5 +1,4 @@
 version: 2
-
 models:
   - name: int_asset_status_history_enhanced_asset_status
     description: Ephemeral model that enhances the asset status history by joining it with 

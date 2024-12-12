@@ -1,0 +1,4 @@
+version: 2
+data_tests:
+  - name: assert_asset_status_history_within_range_validfrom_dls
+    description: "Validates that ingestion_date is within the range of validFrom_DLS"
