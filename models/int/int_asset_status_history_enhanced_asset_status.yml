@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: int_asset_status_history_enhanced_asset_status
+    description: Ephemeral model that enhances the asset status history by joining it with 
+      status metadata. Combines data from the `src_asset_status_history` and `src_status` 
+      source models to include detailed status names and descriptions.
+    columns:
+      - name: asset_status_history_id
+        description: Unique identifier for the asset status history.
+      - name: asset_status_history_date
+        description: Date of the asset status history event.
+      - name: portal_id
+        description: Identifier for the portal associated with the asset status.
+      - name: asset_id
+        description: Unique identifier for the asset.
+      - name: status_name
+        description: Name of the asset status.
+      - name: status_description
+        description: Description of the asset status.
