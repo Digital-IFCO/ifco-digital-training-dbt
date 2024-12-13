@@ -33,3 +33,5 @@ models:
   training_dbt:
     stg:
       +materialized: view
+    int:
+      +materialized: view

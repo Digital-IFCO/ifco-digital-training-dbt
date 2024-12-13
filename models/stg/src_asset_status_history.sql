@@ -1,7 +1,14 @@
+{{
+    config(
+        materialized="incremental",
+        partition_by=["ingestion_date"]
+    )
+}}
+
 with final as (
   select *
   from training_dbt.raw.raw_asset_status_history
-  where validFrom_DLS between '2023-01-01' and '2023-12-31'
+  where validFrom_DLS between '2023-01-01' and '2024-01-01'
 )
 
 select
@@ -15,3 +22,6 @@ from final
 where
   historyStatus = 'A'
   and validTo_DLS = '9999-12-31T23:59:59.999+00:00'
+    {% if is_incremental() %}
+    and cast(validFrom_DLS as date) > (select max(ingestion_date) from {{ this }})
+    {% endif %}
