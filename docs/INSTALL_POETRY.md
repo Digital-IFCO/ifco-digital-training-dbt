@@ -6,6 +6,14 @@ and open it again and run `python --version` to see that you are using python ve
     
     pip install poetry
 
-Install the dependencies in the root path of this Project. For that, please, clone the Github project  👇
+Install the dependencies in the root path of this Project. For that, please, clone the Github project 👇
 
+    git clone https://github.com/Digital-IFCO/ifco-digital-training-dbt.git
+
+    cd ifco-digital-training-dbt
+    
     poetry install
+
+To make sure you are in the virtual environment you have just installed, run the following command
+
+    poetry shell
