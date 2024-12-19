@@ -33,6 +33,8 @@ models:
       +materialized: view
     int:
       +materialized: view
+    mart:
+      +materialized: table
 
 seeds:
   +schema: seeds
