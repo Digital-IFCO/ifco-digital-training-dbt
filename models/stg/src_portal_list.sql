@@ -1,6 +1,6 @@
 with raw_portal_list as (
   select *
-  from training_dbt.raw.raw_portal_list
+  from {{ ref("seed_portal_list") }}
 )
 
 select

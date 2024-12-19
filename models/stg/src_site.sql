@@ -6,7 +6,7 @@
 }}
 with raw_site as (
     select *
-    from training_dbt.raw.raw_site
+    from {{ source("data_lake", "site") }}
     where validFrom_DLS between '2021-01-01' and '2024-12-31'
 )
 

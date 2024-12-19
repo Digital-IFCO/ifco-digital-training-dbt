@@ -7,7 +7,7 @@
 
 with final as (
   select *
-  from training_dbt.raw.raw_asset_status_history
+  from {{ source("data_lake", "assetstatushistory") }}
   where validFrom_DLS between '2023-01-01' and '2024-01-01'
 )
 

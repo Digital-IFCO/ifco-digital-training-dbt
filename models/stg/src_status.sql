@@ -1,6 +1,6 @@
 with raw_status as (
   select *
-  from training_dbt.raw.raw_status
+  from {{ ref("seed_status") }}
 )
 
 select

@@ -1,0 +1,7 @@
+sources:
+  - name: data_lake
+    database: lake_legacy
+    schema: silver_rtina
+    tables:
+      - name: assetstatushistory
+      - name: site
