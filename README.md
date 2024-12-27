@@ -19,3 +19,7 @@ The included setup instructions are a quick start to ensure your development env
 #### Step 3:
 
 **[CONFIGURE IDE](docs/CONFIGURE_IDE.md)**
+
+#### Step 4:
+
+**[INSTALL DATABRICKS CLI](docs/INSTALL_DATABRICKS_CLI.md)**
