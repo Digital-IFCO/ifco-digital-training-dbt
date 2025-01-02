@@ -1,67 +1,81 @@
 # GitHub Action: Deployment on a Merge
-
 This GitHub Action automates the deployment process when changes are pushed to the `main` branch. 
 It consists of two jobs: `test` and `deploy`.
-
-In this exercise you will have to fill/modify some parts of the github action to solve soembugs or also create some
+```yaml
+name: Deployment on a merge
+```
+In this exercise you will have to fill/modify some parts of the github action to solve some bugs or also create some
 secrets and variables needed for the execution.
-
 ## Workflow Trigger
-
-The workflow is triggered on a push to the `main` branch.
-
+The workflow is triggered on a push to the `main` branch.<br>
+[Reference](https://github.com/github/docs/blob/main/content/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows.md)
 ```yaml
 on:
   push:
     branches:
       - 'main'
+jobs:
 ```
 ## Jobs
-
 ### Test Job
-The test job runs unit tests using dbt. It has the following steps:
+The test job runs unit tests using dbt. For this job we use a github hosted runner, created by github. <br>
+[Reference](https://github.com/github/docs/blob/main/content/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners.md)
 ```yaml
-jobs:
   test:
     name: "dbt unit test"
     runs-on: ubuntu-latest
     steps:
 ```
 #### Checkout 
-This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it.
+This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it. <br>
+[Reference](https://github.com/actions/checkout)
 ```yaml
       - uses: actions/checkout@v4
 ```
-#### Generate Profile to Serverless SQL Warehouse
+#### Generate Profile
+This step creates a configuration profile for connecting to a Databricks Serverless SQL Warehouse.
+It uses the sed command to replace placeholders in a template file (profiles.yml.dist) with
+actual values from GitHub Secrets and other specified values. The resulting configuration is saved to profiles.yml.<br>
+[Reference Secrets](https://github.com/github/docs/blob/main/content/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions.md)<br>
+[Profiles.yml.dist](../../profiles.yml.dist)
 ```yaml
-      - name: Generate profile to serverless SQL warehouse
+      - name: Generate Databricks Profile
         run: |
-          sed -e 's|ENVIRONMENT|asset_accelerator|' \
+          sed -e 's|ENVIRONMENT|#TODO: Add environment|' \
               -e 's|PUT YOUR HOST|${{ secrets.DATABRICKS_HOST }}|' \
               -e 's|PUT YOUR PATH|${{ secrets.DATABRICKS_SERVERLESS_HTTP_PATH }}|' \
               -e 's|PUT YOUR TOKEN|${{ secrets.DATABRICKS_TOKEN }}|' \
               -e 's|PUT YOUR THREADS|8|' \
               ./profiles.yml.dist > ./profiles.yml \
-              && echo -e "\n      database: nam" >>  ./profiles.yml
+              && echo -e "\n      database: #TODO: Add database" >>  ./profiles.yml
 ```
 #### DBT Dependencies
+A GitHub Action to run dbt commands in a Docker container. This action captures the dbt console output for use in subsequent steps.<br>
+In this case, the action is to install dbt dependencies.<br>
+[Reference Action](https://github.com/mwhitaker/dbt-action?tab=readme-ov-file)<br>
+[Reference Packages](../../packages.yml)
 ```yaml
       - name: dbt-deps
-        uses: bzillins/dbt-action@master
+        uses: mwhitaker/dbt-action@master
         with:
           dbt_command: "dbt deps"
           dbt_project_folder: "."
 ```
 #### DBT Test
+A GitHub Action to run dbt commands in a Docker container. This action captures the dbt console output for use in subsequent steps.<br>
+In this case, we use the github action to execute the tests<br>
+[Reference Action](https://github.com/mwhitaker/dbt-action?tab=readme-ov-file)<br>
+[Reference Command](https://docs.getdbt.com/reference/commands/test)
 ```yaml
       - name: dbt-test
-        uses: bzillins/dbt-action@master
+        uses: mwhitaker/dbt-action@master
         with:
           dbt_command: "dbt test --select 'test_type:unit'"
           dbt_project_folder: "."
 ```
 ### Deploy Job
-The deploy job runs after the test job and handles the deployment process. Following steps:
+The deployment job runs after the test job and handles the deployment process. Needs that test job is done with a positive result before executing this step.<br>
+[Reference Needs](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds)
 ```yaml
   deploy:
     needs: test
@@ -70,14 +84,23 @@ The deploy job runs after the test job and handles the deployment process. Follo
     steps:
 ```
 #### Checkout
+This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it. <br>
+[Reference](https://github.com/actions/checkout)
 ```yaml
       - uses: actions/checkout@v4
 ```
 ### Setup CLI
+Setup-cli makes it easy to install the Databricks CLI in your environment. It provides a composite GitHub Action and a portable installation script that can be used in most CI/CD systems and development environments.<br>
+[Reference](https://github.com/databricks/setup-cli)
 ```yaml
       - uses: databricks/setup-cli@main
 ```
 #### Generate Profile to Databricks
+This step creates a configuration profile for connecting to a Databricks Serverless SQL Warehouse.
+It uses the sed command to replace placeholders in a template file (profiles.yml.dist) with
+actual values from GitHub Secrets and other specified values. The resulting configuration is saved to profiles.yml.<br>
+[Reference Secrets](https://github.com/github/docs/blob/main/content/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions.md)<br>
+[Profiles.yml.dist](../../profiles.yml.dist)
 ```yaml
       - name: Generate profile to Databricks
         run: |
@@ -90,6 +113,8 @@ The deploy job runs after the test job and handles the deployment process. Follo
               && echo -e "\n      database: nam" >>  ./profiles.yml
 ```
 #### Generate Databricks YAML
+This step creates a Databricks configuration file by modifying a template file (databricks.yml.dist). It uses the sed command to replace placeholders with actual values from GitHub Secrets and other specified values. The resulting configuration is saved to databricks.yml.<br>
+[Reference Databricks Bundle](https://docs.databricks.com/en/dev-tools/bundles/settings.html)
 ```yaml
       - name: Generate Databricks YAML 
         run: |
@@ -98,7 +123,21 @@ The deploy job runs after the test job and handles the deployment process. Follo
               -e 's/ID/${{ secrets.DATABRICKS_HOST_ID }}/' \
               ./databricks.yml.dist > ./databricks.yml
 ```
-#### DBT Deps
+#### DBT Dependencies
+A GitHub Action to run dbt commands in a Docker container. This action captures the dbt console output for use in subsequent steps.<br>
+In this case, the action is to install dbt dependencies.<br>
+[Reference Action](https://github.com/mwhitaker/dbt-action?tab=readme-ov-file)<br>
+[Reference Packages](../../packages.yml)
+```yaml
+      - name: dbt-deps
+        uses: mwhitaker/dbt-action@master
+        with:
+          dbt_command: "dbt deps"
+          dbt_project_folder: "."
+```
+### Download Code into Runner
+Downloads code from a Databricks workspace directory to the runner's local environment. It uses the databricks workspace export-dir command to export the specified directory.<br>
+[Reference Databricks Commands](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/cli/commands#workspace-commands)
 ```yaml
       - name: Download code into runner
         run: |
@@ -108,18 +147,21 @@ The deploy job runs after the test job and handles the deployment process. Follo
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_BUNDLE_ENV: replace_me # Add bundle
 ```
-#### Download code into runner
-```yaml
-```
 #### DBT Run on Modified Models
+A GitHub Action to run dbt commands in a Docker container. This action captures the dbt console output for use in subsequent steps.<br>
+ This command builds the DBT models that have been modified. The `--defer` flag allows the use of a state file to defer to the previous state of the models, and `--state` ./target_prod specifies the state directory.<br>
+[Reference Action](https://github.com/mwhitaker/dbt-action?tab=readme-ov-file)<br>
+[Reference Command](https://docs.getdbt.com/reference/commands/build)
 ```yaml
     - name: DBT run on modified models
-      uses: bzillins/dbt-action@master
+      uses: mwhitaker/dbt-action@master
       with:
-        dbt_command: "dbt build --select 'state:modified+1 tag:asset_accelerator' --defer --state ./target_prod"
+        dbt_command: "dbt build --select 'state:modified+1' --defer --state ./target_prod"
         dbt_project_folder: "."
 ```
 #### Deploy bundle
+This step deploys a Databricks Asset Bundle using the Databricks CLI. It runs the databricks bundle deploy command to deploy the bundle.<br>
+[Reference Databricks Command](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/cli/bundle-commands#deploy)
 ```yaml
       - name: Deploy bundle to Databricks
         run: databricks bundle deploy
@@ -130,6 +172,8 @@ The deploy job runs after the test job and handles the deployment process. Follo
           DATABRICKS_BUNDLE_ENV: replace_me # Add bundle
 ```
 #### Deploy profiles.yml
+This step uploads the profiles.yml file to a specified location in the Databricks workspace. It uses the databricks workspace import command to perform the upload.<br>
+[Reference Databricks Commands](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/cli/commands#workspace-commands)
 ```yaml
       - name: Deploy profiles.yml
         run: |
@@ -140,6 +184,8 @@ The deploy job runs after the test job and handles the deployment process. Follo
           DATABRICKS_BUNDLE_ENV: replace_me # Add bundle
 ```
 #### Deploy target folder
+This step uploads the contents of the target directory to a specified location in the Databricks workspace. It uses the databricks workspace import-dir command to perform the upload.<br>
+[Reference Databricks Commands](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/cli/commands#workspace-commands)
 ```yaml
       - name: Deploy DBT target folder
         run: |
