@@ -1,0 +1,263 @@
+[0m23:44:45.668684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118c1eea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118b1a720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118c80680>]}
+
+
+============================== 23:44:45.677538 | e2bb4d08-e39d-44b0-8d8a-4f5b403d2753 ==============================
+[0m23:44:45.677538 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:44:45.677967 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rms/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt init', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:44:45.750634 [info ] [MainThread]: Setting up your profile.
+[0m23:47:26.735130 [info ] [MainThread]: Profile s3_dab_dbt_template_project written to /Users/rms/.dbt/profiles.yml using project's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:47:26.751961 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 161.24532, "process_in_blocks": "0", "process_kernel_time": 0.661481, "process_mem_max_rss": "95404032", "process_out_blocks": "0", "process_user_time": 1.410642}
+[0m23:47:26.752544 [debug] [MainThread]: Command `dbt init` succeeded at 23:47:26.752435 after 161.25 seconds
+[0m23:47:26.752947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118c02b40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1189bf440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118cee930>]}
+[0m23:47:26.753289 [debug] [MainThread]: Flushing usage events
+[0m23:47:27.308496 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:53:42.601837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c1c650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c79310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c78da0>]}
+
+
+============================== 23:53:42.604215 | 2fbe86b2-7d59-4dd4-9c3e-553a6b2aaee9 ==============================
+[0m23:53:42.604215 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:53:42.604505 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/logs', 'profiles_dir': '/Users/rms/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt seed', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:53:43.865708 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m23:53:43.866015 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m23:53:43.866182 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m23:53:54.954492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2fbe86b2-7d59-4dd4-9c3e-553a6b2aaee9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10acc8470>]}
+[0m23:53:54.976537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2fbe86b2-7d59-4dd4-9c3e-553a6b2aaee9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea99700>]}
+[0m23:53:54.976804 [info ] [MainThread]: Registered adapter: databricks=1.9.1
+[0m23:53:55.050302 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m23:53:55.050694 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:53:55.050887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2fbe86b2-7d59-4dd4-9c3e-553a6b2aaee9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118ba6960>]}
+[0m23:53:55.713748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2fbe86b2-7d59-4dd4-9c3e-553a6b2aaee9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ab39430>]}
+[0m23:53:55.745352 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/manifest.json
+[0m23:53:55.746760 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/semantic_manifest.json
+[0m23:53:55.790138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2fbe86b2-7d59-4dd4-9c3e-553a6b2aaee9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11afddf10>]}
+[0m23:53:55.790395 [info ] [MainThread]: Found 2 models, 4 data tests, 606 macros
+[0m23:53:55.790565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2fbe86b2-7d59-4dd4-9c3e-553a6b2aaee9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a6a29c0>]}
+[0m23:53:55.791319 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:53:55.791574 [debug] [MainThread]: Command end result
+[0m23:53:55.803499 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/manifest.json
+[0m23:53:55.804338 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/semantic_manifest.json
+[0m23:53:55.805757 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/run_results.json
+[0m23:53:55.805902 [info ] [MainThread]: 
+[0m23:53:55.806086 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:53:55.806220 [info ] [MainThread]: 
+[0m23:53:55.806367 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 TOTAL=0
+[0m23:53:55.807390 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 13.25133, "process_in_blocks": "0", "process_kernel_time": 0.611067, "process_mem_max_rss": "224296960", "process_out_blocks": "0", "process_user_time": 2.40453}
+[0m23:53:55.807563 [debug] [MainThread]: Command `dbt seed` succeeded at 23:53:55.807528 after 13.25 seconds
+[0m23:53:55.807736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c791f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1022f7560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ab0c980>]}
+[0m23:53:55.807888 [debug] [MainThread]: Flushing usage events
+[0m23:53:56.258598 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:54:03.646274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1032c9f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104979160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104978bc0>]}
+
+
+============================== 23:54:03.648640 | 1c34d83e-194c-4cdd-97c2-0d81dc996e8c ==============================
+[0m23:54:03.648640 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:54:03.648932 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/logs', 'profiles_dir': '/Users/rms/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:54:03.963149 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m23:54:03.963414 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m23:54:03.963561 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m23:54:04.341538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10afb6c90>]}
+[0m23:54:04.363797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ab18b0>]}
+[0m23:54:04.364097 [info ] [MainThread]: Registered adapter: databricks=1.9.1
+[0m23:54:04.430080 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m23:54:04.546747 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:54:04.546961 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:54:04.563300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109267320>]}
+[0m23:54:04.594072 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/manifest.json
+[0m23:54:04.595142 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/semantic_manifest.json
+[0m23:54:04.606587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de4d1f0>]}
+[0m23:54:04.606783 [info ] [MainThread]: Found 2 models, 4 data tests, 606 macros
+[0m23:54:04.606940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da87f80>]}
+[0m23:54:04.607619 [info ] [MainThread]: 
+[0m23:54:04.607782 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:54:04.607914 [info ] [MainThread]: 
+[0m23:54:04.608169 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Creating connection
+[0m23:54:04.608313 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m23:54:04.608442 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=2.86102294921875e-06s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Acquired connection on thread (28422, 8434939968), using default compute resource
+[0m23:54:04.610809 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4524524752, session-id=None, name=list_training_dbt, idle-time=0s, acquire-count=0, language=None, thread-identifier=(28422, 6182514688), compute-name=) - Creating connection
+[0m23:54:04.611010 [debug] [ThreadPool]: Acquiring new databricks connection 'list_training_dbt'
+[0m23:54:04.611159 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4524524752, session-id=None, name=list_training_dbt, idle-time=1.1920928955078125e-06s, acquire-count=1, language=None, thread-identifier=(28422, 6182514688), compute-name=) - Acquired connection on thread (28422, 6182514688), using default compute resource
+[0m23:54:04.611312 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4524524752, session-id=None, name=list_training_dbt, idle-time=0.00015807151794433594s, acquire-count=1, language=None, thread-identifier=(28422, 6182514688), compute-name=) - Checking idleness
+[0m23:54:04.611441 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4524524752, session-id=None, name=list_training_dbt, idle-time=0.0002911090850830078s, acquire-count=1, language=None, thread-identifier=(28422, 6182514688), compute-name=) - Retrieving connection
+[0m23:54:04.611559 [debug] [ThreadPool]: Using databricks connection "list_training_dbt"
+[0m23:54:04.611678 [debug] [ThreadPool]: On list_training_dbt: GetSchemas(database=training_dbt, schema=None)
+[0m23:54:04.611796 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:54:05.246455 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4524524752, session-id=01efcd4a-4b98-135c-89f0-64956badf3b4, name=list_training_dbt, idle-time=2.86102294921875e-06s, acquire-count=1, language=None, thread-identifier=(28422, 6182514688), compute-name=) - Connection created
+[0m23:54:05.246873 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01efcd4a-4b98-135c-89f0-64956badf3b4, command-id=Unknown) - Created cursor
+[0m23:54:14.556568 [debug] [ThreadPool]: SQL status: OK in 9.940 seconds
+[0m23:54:14.559507 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01efcd4a-4b98-135c-89f0-64956badf3b4, command-id=01efcd4a-4edd-1cee-b93c-7592e52801e4) - Closing cursor
+[0m23:54:14.560475 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4524524752, session-id=01efcd4a-4b98-135c-89f0-64956badf3b4, name=list_training_dbt, idle-time=1.4781951904296875e-05s, acquire-count=0, language=None, thread-identifier=(28422, 6182514688), compute-name=) - Released connection
+[0m23:54:14.563150 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=None, name=list_training_dbt_s3_dab_schema, idle-time=0s, acquire-count=0, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Creating connection
+[0m23:54:14.563885 [debug] [ThreadPool]: Acquiring new databricks connection 'list_training_dbt_s3_dab_schema'
+[0m23:54:14.564308 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=None, name=list_training_dbt_s3_dab_schema, idle-time=6.9141387939453125e-06s, acquire-count=1, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Acquired connection on thread (28422, 6181941248), using default compute resource
+[0m23:54:14.577398 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=None, name=list_training_dbt_s3_dab_schema, idle-time=0.013031959533691406s, acquire-count=1, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Checking idleness
+[0m23:54:14.577959 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=None, name=list_training_dbt_s3_dab_schema, idle-time=0.013698101043701172s, acquire-count=1, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Retrieving connection
+[0m23:54:14.578232 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=None, name=list_training_dbt_s3_dab_schema, idle-time=0.013981819152832031s, acquire-count=1, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Checking idleness
+[0m23:54:14.578479 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=None, name=list_training_dbt_s3_dab_schema, idle-time=0.014229059219360352s, acquire-count=1, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Retrieving connection
+[0m23:54:14.578703 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m23:54:14.578907 [debug] [ThreadPool]: Using databricks connection "list_training_dbt_s3_dab_schema"
+[0m23:54:14.579171 [debug] [ThreadPool]: On list_training_dbt_s3_dab_schema: /* {"app": "dbt", "dbt_version": "1.9.1", "dbt_databricks_version": "1.9.1", "databricks_sql_connector_version": "3.7.1", "profile_name": "s3_dab_dbt_template_project", "target_name": "dev", "connection_name": "list_training_dbt_s3_dab_schema"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'training_dbt'
+      and table_schema = 's3_dab_schema'
+    
+  
+[0m23:54:14.579407 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:54:14.873101 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=list_training_dbt_s3_dab_schema, idle-time=9.059906005859375e-06s, acquire-count=1, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Connection created
+[0m23:54:14.874397 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01efcd4a-5165-1038-a148-6f14739558ac, command-id=Unknown) - Created cursor
+[0m23:54:16.805404 [debug] [ThreadPool]: SQL status: OK in 2.230 seconds
+[0m23:54:16.831556 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01efcd4a-5165-1038-a148-6f14739558ac, command-id=01efcd4a-5177-1510-92a2-8777657f1c03) - Closing cursor
+[0m23:54:16.832754 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=list_training_dbt_s3_dab_schema, idle-time=6.198883056640625e-06s, acquire-count=0, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Released connection
+[0m23:54:16.834032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060d9af0>]}
+[0m23:54:16.834793 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=12.22630500793457s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Checking idleness
+[0m23:54:16.835172 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=12.226699113845825s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Retrieving connection
+[0m23:54:16.835959 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=12.227394104003906s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Checking idleness
+[0m23:54:16.836373 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=12.227876901626587s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Retrieving connection
+[0m23:54:16.836730 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m23:54:16.837027 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m23:54:16.837385 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=3.0994415283203125e-06s, acquire-count=0, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Released connection
+[0m23:54:16.839618 [debug] [Thread-1 (]: Began running node model.s3_dab_dbt_template_project.orders_raw
+[0m23:54:16.840499 [info ] [Thread-1 (]: 1 of 2 START sql streaming_table model s3_dab_schema.orders_raw ................ [RUN]
+[0m23:54:16.841166 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=list_training_dbt_s3_dab_schema, idle-time=0.008371829986572266s, acquire-count=0, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Checking idleness
+[0m23:54:16.841529 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_training_dbt_s3_dab_schema, now model.s3_dab_dbt_template_project.orders_raw)
+[0m23:54:16.841859 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_raw, idle-time=0.009105205535888672s, acquire-count=0, language=None, thread-identifier=(28422, 6181941248), compute-name=) - Reusing connection previously named list_training_dbt_s3_dab_schema
+[0m23:54:16.842190 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_raw, idle-time=0.00943613052368164s, acquire-count=1, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Acquired connection on thread (28422, 6181941248), using default compute resource for model '`training_dbt`.`s3_dab_schema`.`orders_raw`'
+[0m23:54:16.842507 [debug] [Thread-1 (]: Began compiling node model.s3_dab_dbt_template_project.orders_raw
+[0m23:54:16.850157 [debug] [Thread-1 (]: Writing injected SQL for node "model.s3_dab_dbt_template_project.orders_raw"
+[0m23:54:16.852459 [debug] [Thread-1 (]: Began executing node model.s3_dab_dbt_template_project.orders_raw
+[0m23:54:16.876278 [debug] [Thread-1 (]: Writing runtime sql for node "model.s3_dab_dbt_template_project.orders_raw"
+[0m23:54:16.878088 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_raw, idle-time=0.045352935791015625s, acquire-count=1, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Checking idleness
+[0m23:54:16.878317 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_raw, idle-time=0.04560399055480957s, acquire-count=1, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Retrieving connection
+[0m23:54:16.878496 [debug] [Thread-1 (]: Using databricks connection "model.s3_dab_dbt_template_project.orders_raw"
+[0m23:54:16.878736 [debug] [Thread-1 (]: On model.s3_dab_dbt_template_project.orders_raw: /* {"app": "dbt", "dbt_version": "1.9.1", "dbt_databricks_version": "1.9.1", "databricks_sql_connector_version": "3.7.1", "profile_name": "s3_dab_dbt_template_project", "target_name": "dev", "node_id": "model.s3_dab_dbt_template_project.orders_raw"} */
+
+            CREATE STREAMING TABLE `training_dbt`.`s3_dab_schema`.`orders_raw`
+    
+    COMMENT 'Raw ingested orders'
+    
+  
+
+    
+    AS -- This model file defines a streaming table called 'orders_raw'
+--
+-- The streaming table below ingests all JSON files in /databricks-datasets/retail-org/sales_orders/
+-- Read more about streaming tables at https://docs.getdbt.com/reference/resource-configs/databricks-configs#materialized-views-and-streaming-tables
+-- Current limitation: a "full refresh" is needed in case the definition below is changed; see https://github.com/databricks/dbt-databricks/issues/561.
+
+
+select
+  customer_name,
+  date(timestamp(from_unixtime(try_cast(order_datetime as bigint)))) as order_date,
+  order_number
+from stream read_files(
+  "/databricks-datasets/retail-org/sales_orders/",
+  format => "json",
+  header => true
+)
+
+        
+[0m23:54:16.878966 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01efcd4a-5165-1038-a148-6f14739558ac, command-id=Unknown) - Created cursor
+[0m23:55:30.729969 [debug] [Thread-1 (]: SQL status: OK in 73.850 seconds
+[0m23:55:30.733595 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01efcd4a-5165-1038-a148-6f14739558ac, command-id=01efcd4a-52ac-1c02-ad5d-91756990eba8) - Closing cursor
+[0m23:55:30.884053 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_raw, idle-time=4.0531158447265625e-06s, acquire-count=0, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Released connection
+[0m23:55:30.884592 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_raw, idle-time=3.0994415283203125e-06s, acquire-count=0, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Released connection
+[0m23:55:30.888494 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10382b0b0>]}
+[0m23:55:30.889010 [info ] [Thread-1 (]: 1 of 2 OK created sql streaming_table model s3_dab_schema.orders_raw ........... [[32mOK[0m in 74.04s]
+[0m23:55:30.889526 [debug] [Thread-1 (]: Finished running node model.s3_dab_dbt_template_project.orders_raw
+[0m23:55:30.890278 [debug] [Thread-1 (]: Began running node model.s3_dab_dbt_template_project.orders_daily
+[0m23:55:30.890792 [info ] [Thread-1 (]: 2 of 2 START sql materialized_view model s3_dab_schema.orders_daily ............ [RUN]
+[0m23:55:30.891358 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_raw, idle-time=0.006737232208251953s, acquire-count=0, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Checking idleness
+[0m23:55:30.891717 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.s3_dab_dbt_template_project.orders_raw, now model.s3_dab_dbt_template_project.orders_daily)
+[0m23:55:30.892022 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_daily, idle-time=0.0074481964111328125s, acquire-count=0, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Reusing connection previously named model.s3_dab_dbt_template_project.orders_raw
+[0m23:55:30.892337 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_daily, idle-time=0.007764101028442383s, acquire-count=1, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Acquired connection on thread (28422, 6181941248), using default compute resource for model '`training_dbt`.`s3_dab_schema`.`orders_daily`'
+[0m23:55:30.892603 [debug] [Thread-1 (]: Began compiling node model.s3_dab_dbt_template_project.orders_daily
+[0m23:55:30.895499 [debug] [Thread-1 (]: Writing injected SQL for node "model.s3_dab_dbt_template_project.orders_daily"
+[0m23:55:30.896281 [debug] [Thread-1 (]: Began executing node model.s3_dab_dbt_template_project.orders_daily
+[0m23:55:30.912013 [debug] [Thread-1 (]: Writing runtime sql for node "model.s3_dab_dbt_template_project.orders_daily"
+[0m23:55:30.912912 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_daily, idle-time=0.02832627296447754s, acquire-count=1, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Checking idleness
+[0m23:55:30.913192 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_daily, idle-time=0.02863001823425293s, acquire-count=1, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Retrieving connection
+[0m23:55:30.913359 [debug] [Thread-1 (]: Using databricks connection "model.s3_dab_dbt_template_project.orders_daily"
+[0m23:55:30.913613 [debug] [Thread-1 (]: On model.s3_dab_dbt_template_project.orders_daily: /* {"app": "dbt", "dbt_version": "1.9.1", "dbt_databricks_version": "1.9.1", "databricks_sql_connector_version": "3.7.1", "profile_name": "s3_dab_dbt_template_project", "target_name": "dev", "node_id": "model.s3_dab_dbt_template_project.orders_daily"} */
+
+            create materialized view `training_dbt`.`s3_dab_schema`.`orders_daily`
+    
+    COMMENT 'Number of orders by day'
+    
+  
+
+    
+  as
+    -- This model file defines a materialized view called 'orders_daily'
+--
+-- Read more about materialized at https://docs.getdbt.com/reference/resource-configs/databricks-configs#materialized-views-and-streaming-tables
+-- Current limitation: a "full refresh" is needed in case the definition below is changed; see https://github.com/databricks/dbt-databricks/issues/561.
+
+
+select order_date, count(*) AS number_of_orders
+
+from `training_dbt`.`s3_dab_schema`.`orders_raw`
+
+-- During development, only process a smaller range of data
+
+where order_date >= '2019-08-01' and order_date < '2019-09-01'
+
+
+group by order_date
+
+        
+[0m23:55:30.913858 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01efcd4a-5165-1038-a148-6f14739558ac, command-id=Unknown) - Created cursor
+[0m23:56:36.372867 [debug] [Thread-1 (]: SQL status: OK in 65.460 seconds
+[0m23:56:36.376441 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01efcd4a-5165-1038-a148-6f14739558ac, command-id=01efcd4a-7ec9-15cf-a460-a2416c4217b0) - Closing cursor
+[0m23:56:36.681387 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_daily, idle-time=1.0013580322265625e-05s, acquire-count=0, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Released connection
+[0m23:56:36.682735 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(id=4528066624, session-id=01efcd4a-5165-1038-a148-6f14739558ac, name=model.s3_dab_dbt_template_project.orders_daily, idle-time=6.9141387939453125e-06s, acquire-count=0, language=sql, thread-identifier=(28422, 6181941248), compute-name=) - Released connection
+[0m23:56:36.684044 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1c34d83e-194c-4cdd-97c2-0d81dc996e8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119005e50>]}
+[0m23:56:36.685162 [info ] [Thread-1 (]: 2 of 2 OK created sql materialized_view model s3_dab_schema.orders_daily ....... [[32mOK[0m in 65.79s]
+[0m23:56:36.685753 [debug] [Thread-1 (]: Finished running node model.s3_dab_dbt_template_project.orders_daily
+[0m23:56:36.687277 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=139.84978199005127s, acquire-count=0, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Checking idleness
+[0m23:56:36.687821 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=139.8504457473755s, acquire-count=0, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Closing for idleness
+[0m23:56:36.688098 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Reset connection handle
+[0m23:56:36.688361 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Reusing connection previously named master
+[0m23:56:36.688625 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=2.1457672119140625e-06s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Acquired connection on thread (28422, 8434939968), using default compute resource
+[0m23:56:36.688915 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=0.00030112266540527344s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Checking idleness
+[0m23:56:36.689155 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=None, name=master, idle-time=0.0005400180816650391s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Retrieving connection
+[0m23:56:36.689399 [debug] [MainThread]: On master: ROLLBACK
+[0m23:56:36.689620 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:56:36.951763 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=01efcd4a-a614-1907-9e90-cbbf5cbe76dd, name=master, idle-time=1.4066696166992188e-05s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Connection created
+[0m23:56:36.952995 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m23:56:36.953958 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=01efcd4a-a614-1907-9e90-cbbf5cbe76dd, name=master, idle-time=0.0024149417877197266s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Checking idleness
+[0m23:56:36.954489 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=01efcd4a-a614-1907-9e90-cbbf5cbe76dd, name=master, idle-time=0.003046751022338867s, acquire-count=1, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Retrieving connection
+[0m23:56:36.954845 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m23:56:36.955171 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m23:56:36.955509 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4524109760, session-id=01efcd4a-a614-1907-9e90-cbbf5cbe76dd, name=master, idle-time=9.5367431640625e-07s, acquire-count=0, language=None, thread-identifier=(28422, 8434939968), compute-name=) - Released connection
+[0m23:56:36.955988 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:56:36.956308 [debug] [MainThread]: On master: ROLLBACK
+[0m23:56:36.956623 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m23:56:36.956901 [debug] [MainThread]: On master: Close
+[0m23:56:36.957206 [debug] [MainThread]: Databricks adapter: Connection(session-id=01efcd4a-a614-1907-9e90-cbbf5cbe76dd) - Closing connection
+[0m23:56:37.190207 [debug] [MainThread]: Connection 'list_training_dbt' was properly closed.
+[0m23:56:37.191422 [debug] [MainThread]: On list_training_dbt: Close
+[0m23:56:37.192350 [debug] [MainThread]: Databricks adapter: Connection(session-id=01efcd4a-4b98-135c-89f0-64956badf3b4) - Closing connection
+[0m23:56:37.289049 [debug] [MainThread]: Connection 'model.s3_dab_dbt_template_project.orders_daily' was properly closed.
+[0m23:56:37.290180 [debug] [MainThread]: On model.s3_dab_dbt_template_project.orders_daily: ROLLBACK
+[0m23:56:37.290714 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m23:56:37.291105 [debug] [MainThread]: On model.s3_dab_dbt_template_project.orders_daily: Close
+[0m23:56:37.291530 [debug] [MainThread]: Databricks adapter: Connection(session-id=01efcd4a-5165-1038-a148-6f14739558ac) - Closing connection
+[0m23:56:37.369294 [info ] [MainThread]: 
+[0m23:56:37.369881 [info ] [MainThread]: Finished running 1 materialized view model, 1 streaming table model in 0 hours 2 minutes and 32.76 seconds (152.76s).
+[0m23:56:37.370777 [debug] [MainThread]: Command end result
+[0m23:56:37.393425 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/manifest.json
+[0m23:56:37.395102 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/semantic_manifest.json
+[0m23:56:37.399326 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/target/run_results.json
+[0m23:56:37.399542 [info ] [MainThread]: 
+[0m23:56:37.399793 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:56:37.399982 [info ] [MainThread]: 
+[0m23:56:37.400185 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m23:56:37.401950 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 153.80153, "process_in_blocks": "0", "process_kernel_time": 0.280201, "process_mem_max_rss": "226492416", "process_out_blocks": "0", "process_user_time": 1.508386}
+[0m23:56:37.402239 [debug] [MainThread]: Command `dbt run` succeeded at 23:56:37.402182 after 153.80 seconds
+[0m23:56:37.402486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10474adb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d905100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1038514f0>]}
+[0m23:56:37.402731 [debug] [MainThread]: Flushing usage events
+[0m23:56:37.924737 [debug] [MainThread]: An error was encountered while trying to flush usage events
