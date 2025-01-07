@@ -14,6 +14,8 @@ resources:
     get-crate-data-job:
       name: get-crate-data-job
       # The name of the job to be created in Databricks.
+      tags:
+        training: "s3-deployment"
 
       job_clusters:
         - job_cluster_key: common-cluster
@@ -21,7 +23,9 @@ resources:
             spark_version: 12.2.x-scala2.12
             node_type_id: Standard_DS3_v2
             num_workers: 1
-          # Configuration for the cluster to be used by the job.
+            custom_tags:
+              training: "s3-deployment"
+          # Configuration for the cluster to be used by the job, including custom tags.
       tasks:
         - task_key: get-crate-data-task
           job_cluster_key: common-cluster
