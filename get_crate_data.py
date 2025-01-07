@@ -21,4 +21,4 @@ df = spark.createDataFrame(data, schema)
 df = df.withColumn("date", to_date(col("date"), "yyyy-MM-dd"))
 
 # Write the transformed DataFrame to a table in Unity Catalog
-df.write.mode("overwrite").saveAsTable("training_dbt.dev_rodrigo.crate_data")
+df.write.mode("overwrite").saveAsTable("training_dbt.s3_dab_schema.crate_data")
