@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=bundle_config_schema.json
+# This line specifies the schema for the YAML file, which helps with validation and autocompletion in editors.
+bundle:
+  name: s3-demo-crate-data
+
+sync:
+  exclude:
+  - ".venv"
+  - ".vscode"
+  # These directories are excluded from synchronization to the Databricks workspace.
+
+resources:
+  jobs:
+    get-crate-data-job:
+      name: get-crate-data-job
+      # The name of the job to be created in Databricks.
+
+      job_clusters:
+        - job_cluster_key: common-cluster
+          new_cluster:
+            spark_version: 12.2.x-scala2.12
+            node_type_id: Standard_DS3_v2
+            num_workers: 1
+          # Configuration for the cluster to be used by the job.
+      tasks:
+        - task_key: get-crate-data-task
+          job_cluster_key: common-cluster
+          notebook_task:
+            notebook_path: ./get_crate_data.py
+        - task_key: transform-crate-data-task
+          depends_on:
+            - task_key: get-crate-data-task
+          job_cluster_key: common-cluster
+          notebook_task:
+            notebook_path: ./transform_crate_data.py
+
+targets:
+  development:
+    workspace:
+      host: https://adb-2943869463807160.0.azuredatabricks.net
+  # Configuration for the development target, specifying the Databricks workspace host.
