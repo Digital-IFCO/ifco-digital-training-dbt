@@ -261,3 +261,73 @@ group by order_date
 [0m23:56:37.402486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10474adb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d905100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1038514f0>]}
 [0m23:56:37.402731 [debug] [MainThread]: Flushing usage events
 [0m23:56:37.924737 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:40:23.618026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e1f440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e7cb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e7c770>]}
+
+
+============================== 16:40:23.627480 | 20780a2c-2918-467d-b6dc-370377819160 ==============================
+[0m16:40:23.627480 [info ] [MainThread]: Running with dbt=1.9.1
+[0m16:40:23.627952 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/logs', 'profiles_dir': '/Users/rms/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:40:23.709903 [info ] [MainThread]: Setting up your profile.
+[0m16:41:37.237480 [info ] [MainThread]: Profile s3_dab_dbt_template_project written to /Users/rms/.dbt/profiles.yml using project's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:41:37.258336 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 73.78525, "process_in_blocks": "0", "process_kernel_time": 0.653417, "process_mem_max_rss": "95256576", "process_out_blocks": "0", "process_user_time": 1.361887}
+[0m16:41:37.258827 [debug] [MainThread]: Command `dbt init` succeeded at 16:41:37.258758 after 73.79 seconds
+[0m16:41:37.259100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e02f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cec920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c4bbc0>]}
+[0m16:41:37.259324 [debug] [MainThread]: Flushing usage events
+[0m16:41:37.826736 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:41:46.453571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d1d550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d7cb00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d7c7a0>]}
+
+
+============================== 16:41:46.456027 | 0f3feb36-8fea-433e-a8b1-b319261e9984 ==============================
+[0m16:41:46.456027 [info ] [MainThread]: Running with dbt=1.9.1
+[0m16:41:46.456308 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/logs', 'profiles_dir': '/Users/rms/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:41:46.474224 [info ] [MainThread]: dbt version: 1.9.1
+[0m16:41:46.476114 [info ] [MainThread]: python version: 3.12.8
+[0m16:41:46.476320 [info ] [MainThread]: python path: /Users/rms/.pyenv/versions/3.12.8/bin/python3.12
+[0m16:41:46.476464 [info ] [MainThread]: os info: macOS-15.1.1-arm64-arm-64bit
+[0m16:41:48.030533 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m16:41:48.030785 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m16:41:48.030928 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m16:41:50.625779 [info ] [MainThread]: Using profiles dir at /Users/rms/.dbt
+[0m16:41:50.626192 [info ] [MainThread]: Using profiles.yml file at /Users/rms/.dbt/profiles.yml
+[0m16:41:50.626395 [info ] [MainThread]: Using dbt_project.yml file at /Users/rms/TestProjects/dabs_training/s3_dabs_ga_training_project/ifco-digital-training-dbt/s3_dab_dbt_template_project/dbt_project.yml
+[0m16:41:50.626596 [info ] [MainThread]: adapter type: databricks
+[0m16:41:50.626756 [info ] [MainThread]: adapter version: 1.9.1
+[0m16:41:50.671768 [info ] [MainThread]: Configuration:
+[0m16:41:50.672058 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:41:50.672228 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:41:50.672375 [info ] [MainThread]: Required dependencies:
+[0m16:41:50.672581 [debug] [MainThread]: Executing "git --help"
+[0m16:41:50.690977 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:41:50.691465 [debug] [MainThread]: STDERR: "b''"
+[0m16:41:50.691641 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:41:50.691846 [info ] [MainThread]: Connection:
+[0m16:41:50.692015 [info ] [MainThread]:   host: adb-1149589327075054.14.azuredatabricks.net/
+[0m16:41:50.692155 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/4a60cc3d33ff5380
+[0m16:41:50.692286 [info ] [MainThread]:   catalog: training_dbt
+[0m16:41:50.692426 [info ] [MainThread]:   schema: s3_dab_schema
+[0m16:41:50.692751 [info ] [MainThread]: Registered adapter: databricks=1.9.1
+[0m16:41:50.837227 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4788461472, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(13961, 8332458048), compute-name=) - Creating connection
+[0m16:41:50.837663 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m16:41:50.837887 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4788461472, session-id=None, name=debug, idle-time=5.0067901611328125e-06s, acquire-count=1, language=None, thread-identifier=(13961, 8332458048), compute-name=) - Acquired connection on thread (13961, 8332458048), using default compute resource
+[0m16:41:50.838122 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4788461472, session-id=None, name=debug, idle-time=0.00024890899658203125s, acquire-count=1, language=None, thread-identifier=(13961, 8332458048), compute-name=) - Checking idleness
+[0m16:41:50.838317 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4788461472, session-id=None, name=debug, idle-time=0.0004489421844482422s, acquire-count=1, language=None, thread-identifier=(13961, 8332458048), compute-name=) - Retrieving connection
+[0m16:41:50.838492 [debug] [MainThread]: Using databricks connection "debug"
+[0m16:41:50.838661 [debug] [MainThread]: On debug: select 1 as id
+[0m16:41:50.838819 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:41:51.448181 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4788461472, session-id=01efcdd7-142b-1483-aa3a-1fba463d0f12, name=debug, idle-time=1.0013580322265625e-05s, acquire-count=1, language=None, thread-identifier=(13961, 8332458048), compute-name=) - Connection created
+[0m16:41:51.449086 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01efcdd7-142b-1483-aa3a-1fba463d0f12, command-id=Unknown) - Created cursor
+[0m16:41:57.784752 [debug] [MainThread]: SQL status: OK in 6.950 seconds
+[0m16:41:57.786212 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01efcdd7-142b-1483-aa3a-1fba463d0f12, command-id=01efcdd7-145e-18e2-b998-9f95349a2ad6) - Closing cursor
+[0m16:41:58.188560 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4788461472, session-id=01efcdd7-142b-1483-aa3a-1fba463d0f12, name=debug, idle-time=1.6927719116210938e-05s, acquire-count=0, language=None, thread-identifier=(13961, 8332458048), compute-name=) - Released connection
+[0m16:41:58.190107 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:41:58.191348 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:41:58.197644 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 11.786186, "process_in_blocks": "0", "process_kernel_time": 0.498978, "process_mem_max_rss": "219250688", "process_out_blocks": "0", "process_user_time": 1.497799}
+[0m16:41:58.198768 [debug] [MainThread]: Command `dbt debug` succeeded at 16:41:58.198504 after 11.79 seconds
+[0m16:41:58.199485 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:41:58.199937 [debug] [MainThread]: On debug: Close
+[0m16:41:58.200410 [debug] [MainThread]: Databricks adapter: Connection(session-id=01efcdd7-142b-1483-aa3a-1fba463d0f12) - Closing connection
+[0m16:41:58.283034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bfe5bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d6fbe30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cd41be0>]}
+[0m16:41:58.283809 [debug] [MainThread]: Flushing usage events
+[0m16:41:58.704320 [debug] [MainThread]: An error was encountered while trying to flush usage events

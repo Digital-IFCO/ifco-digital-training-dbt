@@ -1,0 +1,29 @@
+{
+  "version": "v1",
+  "host": "https://adb-2943869463807160.0.azuredatabricks.net",
+  "remote_path": "/Workspace/Users/rodrigo.martin@ifco.com/.bundle/s3-demo-crate-data/development/files",
+  "last_modified_times": {
+    ".DS_Store": "2025-01-07T23:03:48.488332148+01:00",
+    ".gitignore": "2025-01-07T21:26:34.789648455+01:00",
+    "bundle_config_schema.json": "2025-01-07T19:49:20.315006775+01:00",
+    "databricks.yml": "2025-01-07T23:14:59.920026684+01:00",
+    "get_crate_data.py": "2025-01-07T21:40:47.360103741+01:00",
+    "transform_crate_data.py": "2025-01-07T21:40:56.276564102+01:00"
+  },
+  "local_to_remote_names": {
+    ".DS_Store": ".DS_Store",
+    ".gitignore": ".gitignore",
+    "bundle_config_schema.json": "bundle_config_schema.json",
+    "databricks.yml": "databricks.yml",
+    "get_crate_data.py": "get_crate_data",
+    "transform_crate_data.py": "transform_crate_data"
+  },
+  "remote_to_local_names": {
+    ".DS_Store": ".DS_Store",
+    ".gitignore": ".gitignore",
+    "bundle_config_schema.json": "bundle_config_schema.json",
+    "databricks.yml": "databricks.yml",
+    "get_crate_data": "get_crate_data.py",
+    "transform_crate_data": "transform_crate_data.py"
+  }
+}

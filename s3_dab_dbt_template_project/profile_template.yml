@@ -5,13 +5,13 @@ fixed:
   type: databricks
 prompts:
   host:
-    default: adb-2943869463807160.0.azuredatabricks.net
+    default: adb-1149589327075054.14.azuredatabricks.net/
   token:
     hint: 'personal access token to use, dapiXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     hide_input: true
   http_path:
     hint: 'HTTP path of SQL warehouse to use'
-    default: /sql/1.0/warehouses/c60ae6c30a70e710
+    default: /sql/1.0/warehouses/4a60cc3d33ff5380
   catalog:
     hint: 'initial catalog'
     default: training_dbt

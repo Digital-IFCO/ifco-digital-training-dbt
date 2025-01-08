@@ -2,6 +2,9 @@ resources:
   jobs:
     s3_dab_dbt_template_project_job:
       name: s3_dab_dbt_template_project_job
+      
+      tags:
+        training: "s3-deployment"
 
       trigger:
         # Run this job every day, exactly one day from the last run; see https://docs.databricks.com/api/workspace/jobs/create#trigger
@@ -41,3 +44,4 @@ resources:
                 spark.databricks.cluster.profile: singleNode
             custom_tags:
               ResourceClass: SingleNode
+              training: "s3-deployment"

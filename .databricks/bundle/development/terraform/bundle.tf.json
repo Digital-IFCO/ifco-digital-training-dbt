@@ -1,0 +1,66 @@
+{
+  "terraform": {
+    "required_providers": {
+      "databricks": {
+        "source": "databricks/databricks",
+        "version": "1.62.0"
+      }
+    }
+  },
+  "provider": {
+    "databricks": {}
+  },
+  "resource": {
+    "databricks_job": {
+      "get-crate-data-job": {
+        "deployment": {
+          "kind": "BUNDLE",
+          "metadata_file_path": "/Workspace/Users/rodrigo.martin@ifco.com/.bundle/s3-demo-crate-data/development/state/metadata.json"
+        },
+        "edit_mode": "UI_LOCKED",
+        "format": "MULTI_TASK",
+        "job_cluster": [
+          {
+            "job_cluster_key": "common-cluster",
+            "new_cluster": {
+              "custom_tags": {
+                "training": "s3-deployment"
+              },
+              "node_type_id": "Standard_DS3_v2",
+              "num_workers": 1,
+              "spark_version": "12.2.x-scala2.12"
+            }
+          }
+        ],
+        "name": "get-crate-data-job",
+        "queue": {
+          "enabled": true
+        },
+        "tags": {
+          "training": "s3-deployment"
+        },
+        "task": [
+          {
+            "job_cluster_key": "common-cluster",
+            "notebook_task": {
+              "notebook_path": "/Workspace/Users/rodrigo.martin@ifco.com/.bundle/s3-demo-crate-data/development/files/get_crate_data"
+            },
+            "task_key": "get-crate-data-task"
+          },
+          {
+            "depends_on": [
+              {
+                "task_key": "get-crate-data-task"
+              }
+            ],
+            "job_cluster_key": "common-cluster",
+            "notebook_task": {
+              "notebook_path": "/Workspace/Users/rodrigo.martin@ifco.com/.bundle/s3-demo-crate-data/development/files/transform_crate_data"
+            },
+            "task_key": "transform-crate-data-task"
+          }
+        ]
+      }
+    }
+  }
+}
