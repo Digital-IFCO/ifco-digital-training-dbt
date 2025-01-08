@@ -6,8 +6,6 @@ on:
     - 'main'
   workflow_dispatch:
 
-
-
 jobs:
   test:
     name: "DBT Tests"
@@ -20,7 +18,7 @@ jobs:
       - name: "Install DBT Dependencies"
         uses: mwhitaker/dbt-action@master
         with:
-          dbt_command: "dbt test --select 'test_type:unit'"
+          dbt_command: "dbt deps"
           dbt_project_folder: "."
 
       - name: "Execute DBT Tests"
