@@ -4,68 +4,49 @@ on:
   push:
     branches: # Which branches will deploy?
     - 'main'
+  workflow_dispatch:
+
 
 
 jobs:
   test:
-    name: "dbt unit test"
+    name: "DBT Tests"
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/checkout@v4
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
 
-      - name: Generate profile to serverless sql warehouse
-        run: |
-          sed -e 's|ENVIRONMENT|asset_accelerator|' \
-              -e 's|PUT YOUR HOST|${{ secrets.DATABRICKS_HOST }}|' \
-              -e 's|PUT YOUR PATH|${{ secrets.DATABRICKS_SERVERLESS_HTTP_PATH }}|' \
-              -e 's|PUT YOUR TOKEN|${{ secrets.DATABRICKS_TOKEN }}|' \
-              -e 's|PUT YOUR THREADS|8|' \
-              ./profiles.yml.dist > ./profiles.yml \
-              && echo -e "\n      database: nam" >>  ./profiles.yml
-      - name: dbt-deps
-        uses: bzillins/dbt-action@master
-        with:
-          dbt_command: "dbt deps"
-          dbt_project_folder: "."
-      - name: dbt-test
-        uses: bzillins/dbt-action@master
+      - name: "Install DBT Dependencies"
+        uses: mwhitaker/dbt-action@master
         with:
           dbt_command: "dbt test --select 'test_type:unit'"
           dbt_project_folder: "."
+
+      - name: "Execute DBT Tests"
+        uses: mwhitaker/dbt-action@master
+        with:
+          dbt_command: "dbt test --select 'test_type:unit'"
+          dbt_project_folder: "."
+
   deploy:
     needs: test
     name: "Deploy bundle"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
 
-      - uses: databricks/setup-cli@main
+      - name: "Install Databricks CLI"
+        uses: databricks/setup-cli@main
 
-      - name: Generate profile to databircks
-        run: |
-          sed -e 's|ENVIRONMENT|asset_accelerator|' \
-              -e 's|PUT YOUR HOST|${{ secrets.DATABRICKS_HOST }}|' \
-              -e 's|PUT YOUR PATH|${{ secrets.DATABRICKS_HTTP_PATH_SM }}|' \
-              -e 's|PUT YOUR TOKEN|${{ secrets.DATABRICKS_TOKEN }}|' \
-              -e 's|PUT YOUR THREADS|8|' \
-              ./profiles.yml.dist > ./profiles.yml \
-              && echo -e "\n      database: nam" >>  ./profiles.yml
-
-      - name: Generate databricks YAML for asset accelerator
-        run: |
-          sed -e 's/PROJECT/asset_accelerator/' \
-              -e 's/  - resources/  - resources\/asset_accelerator.yml/' \
-              -e 's/ID/${{ secrets.DATABRICKS_HOST_ID }}/' \
-              ./databricks.yml.dist > ./databricks.yml
-
-      - name: dbt-deps
-        uses: bzillins/dbt-action@master
+      - name: "Install DBT Dependencies"
+        uses: mwhitaker/dbt-action@master
         with:
           dbt_command: "dbt deps"
           dbt_project_folder: "."
 
-      - name: Download code into runner
+      - name: "Download Databricks Code Into Runner"
         run: |
           databricks workspace export-dir --overwrite '/Shared/Digital/.bundle/asset_accelerator/files/target' target_prod
         env:
@@ -73,13 +54,13 @@ jobs:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_BUNDLE_ENV: replace_me # Add bundle
 
-      - name: DBT run on modified models
-        uses: bzillins/dbt-action@master
+      - name: "DBT Run On Modified Models"
+        uses: mwhitaker/dbt-action@master
         with:
-          dbt_command: "dbt build --select 'state:modified+1 tag:asset_accelerator' --defer --state ./target_prod"
+          dbt_command: "dbt build --select 'state:modified+1' --defer --state ./target_prod"
           dbt_project_folder: "."
 
-      - name: Deploy bundle to databricks
+      - name: "Deploy Bundle To Databricks"
         run: databricks bundle deploy
         working-directory: .
         env:
@@ -87,7 +68,7 @@ jobs:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_BUNDLE_ENV: replace_me # Add bundle
 
-      - name: Deploy profiles.yml
+      - name: "Deploy Profiles.yml"
         run: |
           databricks workspace import --overwrite --format AUTO --file profiles.yml '/Shared/Digital/.bundle/asset_accelerator/files/profiles.yml'
         env:

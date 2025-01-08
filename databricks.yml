@@ -1,0 +1,32 @@
+# This file defines the structure of this project and how it is deployed
+# to production using Databricks Asset Bundles.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: s3_gh_action_deploy_dbt
+
+include:
+  - resources/*.yml
+
+# Deployment targets.
+# The default schema, catalog, etc. for dbt are defined in dbt_profiles/profiles.yml
+targets:
+  dev:
+    default: true
+    # The default target uses 'mode: development' to create a development copy.
+    # - Deployed resources get prefixed with '[dev my_user_name]'
+    # - Any job schedules and triggers are paused by default.
+    # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
+    mode: development
+    workspace:
+      host: https://adb-8147723794046550.10.azuredatabricks.net
+
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-8147723794046550.10.azuredatabricks.net
+      root_path: /Workspace/Users/gerard.torrent@ifco.com/.bundle/${bundle.name}/${bundle.target}
+    permissions:
+      - user_name: ALL
+        level: CAN_MANAGE
+    run_as:
+      user_name: gerard.torrent@ifco.com

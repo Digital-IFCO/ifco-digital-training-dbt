@@ -3,8 +3,7 @@ name = "ifco-digital-training-dbt"
 version = "0.1.0"
 description = ""
 authors = [
-    "danisoronellas <daniel.soronellas@ifco.com>",
-    "franramb francisco.malpica@ifco.com"
+    "gerardtorrent <gerard.torrent@ifco.com>"
 ]
 readme = "README.md"
 package-mode = false

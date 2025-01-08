@@ -30,7 +30,8 @@ The test job runs unit tests using dbt. For this job we use a github hosted runn
 This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it. <br>
 [Reference](https://github.com/actions/checkout)
 ```yaml
-      - uses: actions/checkout@v4
+      - name: "Checkout Repository"  
+        uses: actions/checkout@v4
 ```
 #### Generate Profile
 This step creates a configuration profile for connecting to a Databricks Serverless SQL Warehouse.
@@ -87,13 +88,15 @@ The deployment job runs after the test job and handles the deployment process. N
 This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it. <br>
 [Reference](https://github.com/actions/checkout)
 ```yaml
-      - uses: actions/checkout@v4
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
 ```
 ### Setup CLI
 Setup-cli makes it easy to install the Databricks CLI in your environment. It provides a composite GitHub Action and a portable installation script that can be used in most CI/CD systems and development environments.<br>
 [Reference](https://github.com/databricks/setup-cli)
 ```yaml
-      - uses: databricks/setup-cli@main
+      - name: "Install Databricks CLI"
+        uses: databricks/setup-cli@main
 ```
 #### Generate Profile to Databricks
 This step creates a configuration profile for connecting to a Databricks Serverless SQL Warehouse.
@@ -153,11 +156,11 @@ A GitHub Action to run dbt commands in a Docker container. This action captures 
 [Reference Action](https://github.com/mwhitaker/dbt-action?tab=readme-ov-file)<br>
 [Reference Command](https://docs.getdbt.com/reference/commands/build)
 ```yaml
-    - name: DBT run on modified models
-      uses: mwhitaker/dbt-action@master
-      with:
-        dbt_command: "dbt build --select 'state:modified+1' --defer --state ./target_prod"
-        dbt_project_folder: "."
+       - name: DBT run on modified models
+         uses: mwhitaker/dbt-action@master
+         with:
+           dbt_command: "dbt build --select 'state:modified+1' --defer --state ./target_prod"
+           dbt_project_folder: "."
 ```
 #### Deploy bundle
 This step deploys a Databricks Asset Bundle using the Databricks CLI. It runs the databricks bundle deploy command to deploy the bundle.<br>

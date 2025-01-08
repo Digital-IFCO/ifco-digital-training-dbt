@@ -1,0 +1,19 @@
+s3_gh_action_deploy_dbt:
+  outputs:
+    dev:
+      catalog: training_dbt
+      host: '{{ env_var(''DBT_HOST'') }}'
+      http_path: /sql/1.0/warehouses/c60ae6c30a70e710
+      method: http
+      schema: s3_gh_action_schema
+      token: '{{ env_var(''DBT_ACCESS_TOKEN'') }}'
+      type: databricks
+    prod:
+      catalog: training_dbt
+      host: '{{ env_var(''DBT_HOST'') }}'
+      http_path: /sql/1.0/warehouses/c60ae6c30a70e710
+      method: http
+      schema: s3_gh_action_schema
+      token: '{{ env_var(''DBT_ACCESS_TOKEN'') }}'
+      type: databricks
+  target: dev

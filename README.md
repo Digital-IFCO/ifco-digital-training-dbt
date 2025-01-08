@@ -23,3 +23,5 @@ The included setup instructions are a quick start to ensure your development env
 #### Step 4:
 
 **[INSTALL DATABRICKS CLI](docs/INSTALL_DATABRICKS_CLI.md)**
+
+dapicc37779001734e60beba545e309f0223-2
