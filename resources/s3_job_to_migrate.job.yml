@@ -1,0 +1,63 @@
+resources:
+  jobs:
+    s3_job_to_migrate:
+      name: s3_job_to_migrate
+      tasks:
+        - task_key: task1
+          existing_cluster_id: 0108-161801-5vzjis68
+          notebook_task:
+            source: WORKSPACE
+            notebook_path: ../src/s3_example_notebook_1.py
+          min_retry_interval_millis: 900000
+          max_retries: 1
+          run_if: ALL_SUCCESS
+          webhook_notifications: {}
+          email_notifications: {}
+        - task_key: task2
+          depends_on:
+            - task_key: task1
+          existing_cluster_id: 0108-161801-5vzjis68
+          email_notifications: {}
+          notebook_task:
+            source: WORKSPACE
+            notebook_path: ../src/s3_example_notebook_2.py
+          webhook_notifications: {}
+          run_if: ALL_SUCCESS
+        - task_key: task3
+          depends_on:
+            - task_key: task2
+          existing_cluster_id: 0108-161801-5vzjis68
+          min_retry_interval_millis: 600000
+          email_notifications: {}
+          webhook_notifications: {}
+          run_if: ALL_SUCCESS
+          max_retries: 1
+          notebook_task:
+            notebook_path: ../src/s3_example_notebook_3.py
+            source: WORKSPACE
+        - task_key: task4
+          depends_on:
+            - task_key: task2
+          existing_cluster_id: 0108-161801-5vzjis68
+          webhook_notifications: {}
+          email_notifications: {}
+          run_if: ALL_SUCCESS
+          notebook_task:
+            source: WORKSPACE
+            notebook_path: ../src/s3_example_notebook_4.py
+        - task_key: task5
+          depends_on:
+            - task_key: task3
+            - task_key: task4
+          existing_cluster_id: 0108-161801-5vzjis68
+          webhook_notifications: {}
+          notebook_task:
+            notebook_path: ../src/s3_example_notebook_5.py
+            source: WORKSPACE
+          email_notifications: {}
+          run_if: ALL_SUCCESS
+      max_concurrent_runs: 1
+      webhook_notifications: {}
+      queue:
+        enabled: true
+      email_notifications: {}
