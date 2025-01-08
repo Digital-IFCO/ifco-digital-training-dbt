@@ -69,7 +69,7 @@ jobs:
 
       - name: "Deploy Profiles.yml"
         run: |
-          databricks workspace import --overwrite --format AUTO --file profiles.yml '/Shared/Digital/.bundle/asset_accelerator/files/profiles.yml'
+          databricks workspace import --overwrite --format AUTO --file profiles.yml '/Shared/Digital/.bundle/${bundle.name}/${bundle.target}/files/profiles.yml'
         env:
           DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
           DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
