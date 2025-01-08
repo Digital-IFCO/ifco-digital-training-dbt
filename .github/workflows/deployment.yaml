@@ -53,14 +53,6 @@ jobs:
           dbt_command: "dbt deps"
           dbt_project_folder: "."
 
-      - name: "Download Databricks Code Into Runner"
-        run: |
-          databricks workspace export-dir --overwrite '/Shared/Digital/.bundle/asset_accelerator/files/target' target_prod
-        env:
-          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
-
       - name: "DBT Run On Modified Models"
         uses: mwhitaker/dbt-action@master
         with:
@@ -83,9 +75,9 @@ jobs:
           DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
           DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 
-      - name: Deploy DBT target folder
+      - name: "Deploy DBT target folder"
         run: |
-          databricks workspace import-dir --overwrite target '/Shared/Digital/.bundle/asset_accelerator/files/target'
+          databricks workspace import-dir --overwrite target '/Workspace/Users/gerard.torrent@ifco.com/.bundle/${bundle.name}/${bundle.target}'
         env:
           DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
           DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
