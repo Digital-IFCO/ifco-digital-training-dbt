@@ -7,16 +7,26 @@ name: Deployment on a merge
 In this exercise you will have to fill/modify some parts of the github action to solve some bugs or also create some
 secrets and variables needed for the execution.
 ## Workflow Trigger
-The workflow is triggered on a push to the `main` branch.<br>
+The workflow is triggered on a push to the `main` branch or also by a manual trigger.<br>
 [Reference](https://github.com/github/docs/blob/main/content/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows.md)
 ```yaml
 on:
   push:
     branches:
       - 'main'
-jobs:
+  workflow_dispatch:
+```
+## Environment Variables
+```yaml
+env:
+  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+  DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+  DATABRICKS_BUNDLE_ENV: ${{secrets.DATABRICKS_BUNDLE_ENV}}
 ```
 ## Jobs
+```yaml
+jobs:
+```
 ### Test Job
 The test job runs unit tests using dbt. For this job we use a github hosted runner, created by github. <br>
 [Reference](https://github.com/github/docs/blob/main/content/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners.md)
@@ -32,23 +42,6 @@ This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workfl
 ```yaml
       - name: "Checkout Repository"  
         uses: actions/checkout@v4
-```
-#### Generate Profile
-This step creates a configuration profile for connecting to a Databricks Serverless SQL Warehouse.
-It uses the sed command to replace placeholders in a template file (profiles.yml.dist) with
-actual values from GitHub Secrets and other specified values. The resulting configuration is saved to profiles.yml.<br>
-[Reference Secrets](https://github.com/github/docs/blob/main/content/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions.md)<br>
-[Profiles.yml.dist](../../profiles.yml.dist)
-```yaml
-      - name: Generate Databricks Profile
-        run: |
-          sed -e 's|ENVIRONMENT|#TODO: Add environment|' \
-              -e 's|PUT YOUR HOST|${{ secrets.DATABRICKS_HOST }}|' \
-              -e 's|PUT YOUR PATH|${{ secrets.DATABRICKS_SERVERLESS_HTTP_PATH }}|' \
-              -e 's|PUT YOUR TOKEN|${{ secrets.DATABRICKS_TOKEN }}|' \
-              -e 's|PUT YOUR THREADS|8|' \
-              ./profiles.yml.dist > ./profiles.yml \
-              && echo -e "\n      database: #TODO: Add database" >>  ./profiles.yml
 ```
 #### DBT Dependencies
 A GitHub Action to run dbt commands in a Docker container. This action captures the dbt console output for use in subsequent steps.<br>
@@ -98,34 +91,6 @@ Setup-cli makes it easy to install the Databricks CLI in your environment. It pr
       - name: "Install Databricks CLI"
         uses: databricks/setup-cli@main
 ```
-#### Generate Profile to Databricks
-This step creates a configuration profile for connecting to a Databricks Serverless SQL Warehouse.
-It uses the sed command to replace placeholders in a template file (profiles.yml.dist) with
-actual values from GitHub Secrets and other specified values. The resulting configuration is saved to profiles.yml.<br>
-[Reference Secrets](https://github.com/github/docs/blob/main/content/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions.md)<br>
-[Profiles.yml.dist](../../profiles.yml.dist)
-```yaml
-      - name: Generate profile to Databricks
-        run: |
-          sed -e 's|ENVIRONMENT|asset_accelerator|' \
-              -e 's|PUT YOUR HOST|${{ secrets.DATABRICKS_HOST }}|' \
-              -e 's|PUT YOUR PATH|${{ secrets.DATABRICKS_HTTP_PATH_SM }}|' \
-              -e 's|PUT YOUR TOKEN|${{ secrets.DATABRICKS_TOKEN }}|' \
-              -e 's|PUT YOUR THREADS|8|' \
-              ./profiles.yml.dist > ./profiles.yml \
-              && echo -e "\n      database: nam" >>  ./profiles.yml
-```
-#### Generate Databricks YAML
-This step creates a Databricks configuration file by modifying a template file (databricks.yml.dist). It uses the sed command to replace placeholders with actual values from GitHub Secrets and other specified values. The resulting configuration is saved to databricks.yml.<br>
-[Reference Databricks Bundle](https://docs.databricks.com/en/dev-tools/bundles/settings.html)
-```yaml
-      - name: Generate Databricks YAML 
-        run: |
-          sed -e 's/PROJECT/asset_accelerator/' \
-              -e 's/  - resources/  - resources\/asset_accelerator.yml/' \
-              -e 's/ID/${{ secrets.DATABRICKS_HOST_ID }}/' \
-              ./databricks.yml.dist > ./databricks.yml
-```
 #### DBT Dependencies
 A GitHub Action to run dbt commands in a Docker container. This action captures the dbt console output for use in subsequent steps.<br>
 In this case, the action is to install dbt dependencies.<br>
@@ -146,21 +111,9 @@ Downloads code from a Databricks workspace directory to the runner's local envir
         run: |
           databricks workspace export-dir --overwrite '/Shared/Digital/.bundle/asset_accelerator/files/target' target_prod
         env:
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: replace_me # Add bundle
-```
-#### DBT Run on Modified Models
-A GitHub Action to run dbt commands in a Docker container. This action captures the dbt console output for use in subsequent steps.<br>
- This command builds the DBT models that have been modified. The `--defer` flag allows the use of a state file to defer to the previous state of the models, and `--state` ./target_prod specifies the state directory.<br>
-[Reference Action](https://github.com/mwhitaker/dbt-action?tab=readme-ov-file)<br>
-[Reference Command](https://docs.getdbt.com/reference/commands/build)
-```yaml
-       - name: DBT run on modified models
-         uses: mwhitaker/dbt-action@master
-         with:
-           dbt_command: "dbt build --select 'state:modified+1' --defer --state ./target_prod"
-           dbt_project_folder: "."
+          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
+          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
+          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 ```
 #### Deploy bundle
 This step deploys a Databricks Asset Bundle using the Databricks CLI. It runs the databricks bundle deploy command to deploy the bundle.<br>
