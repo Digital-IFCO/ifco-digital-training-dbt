@@ -38,7 +38,7 @@ jobs:
 
   deploy:
     needs: test
-    name: "Deploy bundle"
+    name: "Deploy Bundle"
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repository"
