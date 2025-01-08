@@ -22,7 +22,7 @@
             "previewLimit": 50,
             "driver": "Databricks",
             "name": "databricks",
-            "path": "/sql/1.0/warehouses/c60ae6c30a70e710"
+            "path": "/sql/1.0/warehouses/4a60cc3d33ff5380"
         }
     ],
     "sqltools.autoConnectTo": "",

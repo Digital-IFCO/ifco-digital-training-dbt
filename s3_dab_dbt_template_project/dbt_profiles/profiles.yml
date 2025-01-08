@@ -16,7 +16,7 @@ s3_dab_dbt_template_project:
       catalog: training_dbt
       schema: "s3_dab_schema"
 
-      http_path: /sql/1.0/warehouses/c60ae6c30a70e710
+      http_path: /sql/1.0/warehouses/4a60cc3d33ff5380
 
       # The workspace host / token are provided by Databricks
       # see databricks.yml for the workspace host used for 'dev'
@@ -30,7 +30,7 @@ s3_dab_dbt_template_project:
       catalog: training_dbt
       schema: s3_dab_schema
 
-      http_path: /sql/1.0/warehouses/c60ae6c30a70e710
+      http_path: /sql/1.0/warehouses/4a60cc3d33ff5380
 
       # The workspace host / token are provided by Databricks
       # see databricks.yml for the workspace host used for 'prod'
