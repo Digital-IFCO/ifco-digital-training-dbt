@@ -1,0 +1,30 @@
+resources:
+  jobs:
+    get-crate-data-job:
+      name: get-crate-data-job
+      # The name of the job to be created in Databricks.
+      tags:
+        training: "s3-deployment"
+
+      job_clusters:
+        - job_cluster_key: common-cluster
+          new_cluster:
+            spark_version: 15.4.x-scala2.12
+            node_type_id: Standard_DS4_v2
+            num_workers: 1
+            data_security_mode: USER_ISOLATION
+            enable_elastic_disk: true
+            custom_tags:
+              training: "s3-deployment"
+          # Configuration for the cluster to be used by the job, including custom tags.
+      tasks:
+        - task_key: get-crate-data-task
+          job_cluster_key: common-cluster
+          notebook_task:
+            notebook_path: ../src/get_crate_data.py
+        - task_key: transform-crate-data-task
+          depends_on:
+            - task_key: get-crate-data-task
+          job_cluster_key: common-cluster
+          notebook_task:
+            notebook_path: ../src/transform_crate_data.py
