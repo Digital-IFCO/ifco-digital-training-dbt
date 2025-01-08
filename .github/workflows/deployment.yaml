@@ -32,9 +32,9 @@ jobs:
           dbt_command: "dbt test --select 'test_type:unit'"
           dbt_project_folder: "."
         env:
-          DATABRICKS_TOKEN: ${{ var.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ var.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: ${{ var.DATABRICKS_BUNDLE_ENV }}
+          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
+          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
+          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 
   deploy:
     needs: test
@@ -57,9 +57,9 @@ jobs:
         run: |
           databricks workspace export-dir --overwrite '/Shared/Digital/.bundle/asset_accelerator/files/target' target_prod
         env:
-          DATABRICKS_TOKEN: ${{ var.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ var.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: ${{ var.DATABRICKS_BUNDLE_ENV }}
+          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
+          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
+          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 
       - name: "DBT Run On Modified Models"
         uses: mwhitaker/dbt-action@master
@@ -71,23 +71,23 @@ jobs:
         run: databricks bundle deploy
         working-directory: .
         env:
-          DATABRICKS_TOKEN: ${{ var.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ var.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: ${{ var.DATABRICKS_BUNDLE_ENV }}
+          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
+          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
+          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 
       - name: "Deploy Profiles.yml"
         run: |
           databricks workspace import --overwrite --format AUTO --file profiles.yml '/Shared/Digital/.bundle/asset_accelerator/files/profiles.yml'
         env:
-          DATABRICKS_TOKEN: ${{ var.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ var.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: ${{ var.DATABRICKS_BUNDLE_ENV }}
+          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
+          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
+          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 
       - name: Deploy DBT target folder
         run: |
           databricks workspace import-dir --overwrite target '/Shared/Digital/.bundle/asset_accelerator/files/target'
         env:
-          DATABRICKS_TOKEN: ${{ var.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ var.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: ${{ var.DATABRICKS_BUNDLE_ENV }}
+          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
+          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
+          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 
