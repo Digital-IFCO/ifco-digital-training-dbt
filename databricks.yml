@@ -26,7 +26,7 @@ targets:
       host: https://adb-8147723794046550.10.azuredatabricks.net
       root_path: /Workspace/Users/gerard.torrent@ifco.com/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: ALL
+      - group_name: users
         level: CAN_MANAGE
     run_as:
       user_name: gerard.torrent@ifco.com
