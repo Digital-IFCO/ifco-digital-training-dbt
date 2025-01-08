@@ -1,0 +1,7 @@
+name: Deployment on a merge
+
+on:
+  push:
+    branches: # Which branches will deploy?
+    - 'main'
+  workflow_dispatch:
