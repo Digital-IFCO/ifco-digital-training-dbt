@@ -10,11 +10,10 @@ secrets and variables needed for the execution.
 The workflow is triggered on a push to the `main` branch or also by a manual trigger.<br>
 [Triggers Reference](https://github.com/github/docs/blob/main/content/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows.md)
 ```yaml
-on:
-  push:
-    branches:
-      - 'main'
   workflow_dispatch:
+    inputs:
+      user:
+        description: "The user where will be deployed the bundle in databricks workspace, for example gerard.torrent@ifco.com"
 ```
 ## Environment Variables
 For this Github action we are creating environment variables using secrets. We will need some variables to deploy databricks, for this reason we have created secrets to avoid showing the values. <br>

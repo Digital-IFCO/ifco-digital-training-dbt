@@ -2,7 +2,7 @@ name: Deployment on a merge
 
 on:
   push:
-    branches: # Which branches will deploy?
+    branches:
     - 'main'
   workflow_dispatch:
     inputs:
