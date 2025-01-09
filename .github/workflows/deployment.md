@@ -8,7 +8,7 @@ In this exercise you will have to fill/modify some parts of the github action to
 secrets and variables needed for the execution.
 ## Workflow Trigger
 The workflow is triggered on a push to the `main` branch or also by a manual trigger.<br>
-[Reference](https://github.com/github/docs/blob/main/content/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows.md)
+[Triggers Reference](https://github.com/github/docs/blob/main/content/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows.md)
 ```yaml
 on:
   push:
@@ -17,6 +17,8 @@ on:
   workflow_dispatch:
 ```
 ## Environment Variables
+For this Github action we are creating environment variables using secrets. We will need some variables to deploy databricks, for this reason we have created secrets to avoid showing the values. <br>
+[Environment Variables Reference](https://snyk.io/blog/how-to-use-github-actions-environment-variables/)
 ```yaml
 env:
   DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
