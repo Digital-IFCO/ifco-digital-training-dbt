@@ -71,4 +71,6 @@ jobs:
       - name: "Deploy DBT target folder"
         run: |
           databricks workspace import-dir --overwrite target "/Workspace/Users/${USER}/.bundle/${bundle.name}/${bundle.target}"
+        env:
+          USER: $ {{ env.USER }}
 
