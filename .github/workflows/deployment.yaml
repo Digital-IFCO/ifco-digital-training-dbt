@@ -52,10 +52,10 @@ jobs:
           dbt_command: "dbt deps"
           dbt_project_folder: "."
 
-      - name: "DBT Run On Modified Models"
+      - name: "DBT Run On Models"
         uses: mwhitaker/dbt-action@master
         with:
-          dbt_command: "dbt build --select 'state:modified+1' --defer --state ./target_prod"
+          dbt_command: "dbt build"
           dbt_project_folder: "."
 
       - name: "Deploy Bundle To Databricks"

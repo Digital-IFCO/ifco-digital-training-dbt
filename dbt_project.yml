@@ -8,25 +8,13 @@ profile: 's3_gh_action_deploy_dbt'
 # These configurations specify where dbt should look for different types of files.
 # For Databricks asset bundles, we put everything in src, as you may have
 # non-dbt resources in your project.
-model-paths: ["src/models"]
-analysis-paths: ["src/analyses"]
-test-paths: ["src/tests"]
-seed-paths: ["src/seeds"]
-macro-paths: ["src/macros"]
-snapshot-paths: ["src/snapshots"]
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
 
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
-
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
-# In this example config, we tell dbt to build all models in the example/
-# directory as views by default. These settings can be overridden in the
-# individual model files using the `{{ config(...) }}` macro.
-models:
-  s3_gh_action_deploy_dbt:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
