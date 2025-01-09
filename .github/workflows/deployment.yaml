@@ -64,9 +64,9 @@ jobs:
 
       - name: "Deploy Profiles.yml"
         run: |
-          databricks workspace import --overwrite --format AUTO --file profiles.yml '/Workspace/Users/$USER/.bundle/s3_gh_action_deploy_dbt/prod/files/profiles.yml'
+          databricks workspace import --overwrite --format AUTO --file profiles.yml '/Workspace/Users/${USER}/.bundle/s3_gh_action_deploy_dbt/prod/files/profiles.yml'
 
       - name: "Deploy DBT target folder"
         run: |
-          databricks workspace import-dir --overwrite target '/Workspace/Users/$USER/.bundle/${bundle.name}/${bundle.target}'
+          databricks workspace import-dir --overwrite target '/Workspace/Users/${USER}/.bundle/${bundle.name}/${bundle.target}'
 
