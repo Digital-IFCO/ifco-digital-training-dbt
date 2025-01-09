@@ -5,11 +5,15 @@ on:
     branches: # Which branches will deploy?
     - 'main'
   workflow_dispatch:
+    inputs:
+      user:
+        description: "The user where will be deployed the bundle in databricks workspace, for example gerard.torrent@ifco.com"
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
   DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
   DATABRICKS_BUNDLE_ENV: ${{secrets.DATABRICKS_BUNDLE_ENV}}
+  USER: ${{ inputs.user }}
 
 jobs:
   test:
@@ -60,9 +64,9 @@ jobs:
 
       - name: "Deploy Profiles.yml"
         run: |
-          databricks workspace import --overwrite --format AUTO --file profiles.yml '/Workspace/Users/gerard.torrent@ifco.com/.bundle/s3_gh_action_deploy_dbt/prod/files/profiles.yml'
+          databricks workspace import --overwrite --format AUTO --file profiles.yml '/Workspace/Users/$USER/.bundle/s3_gh_action_deploy_dbt/prod/files/profiles.yml'
 
       - name: "Deploy DBT target folder"
         run: |
-          databricks workspace import-dir --overwrite target '/Workspace/Users/gerard.torrent@ifco.com/.bundle/${bundle.name}/${bundle.target}'
+          databricks workspace import-dir --overwrite target '/Workspace/Users/$USER/.bundle/${bundle.name}/${bundle.target}'
 
