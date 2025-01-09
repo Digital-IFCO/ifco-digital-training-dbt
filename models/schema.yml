@@ -8,6 +8,25 @@ models:
         description: "The name of a customer"
         data_tests:
           - not_null
+    tests:
+      - name: unit_test_example_orders_raw
+        config:
+          inputs:
+            - name: input_table
+              data:
+                - customer_name: "John Doe"
+                  order_datetime: "1609459200"  # Example UNIX timestamp
+                  order_number: "12345"
+                - customer_name: "Jane Smith"
+                  order_datetime: "1609545600"
+                  order_number: "67890"
+          expected_output:
+            - customer_name: "John Doe"
+              order_date: "2021-01-01"
+              order_number: "12345"
+            - customer_name: "Jane Smith"
+              order_date: "2021-01-02"
+              order_number: "67890"
 
   - name: orders_daily
     description: "Number of orders by day"
