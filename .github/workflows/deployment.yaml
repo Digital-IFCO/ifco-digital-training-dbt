@@ -23,16 +23,6 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v4
 
-      - name: Generate profile to serverless sql warehouse
-        run: |
-          sed -e 's|ENVIRONMENT|${ env.DATABRICKS_BUNDLE_ENVIRONMENT}|' \
-              -e 's|PUT YOUR HOST|${{ secrets.DATABRICKS_HOST }}|' \
-              -e 's|PUT YOUR PATH|${{ secrets.DATABRICKS_SERVERLESS_HTTP_PATH }}|' \
-              -e 's|PUT YOUR TOKEN|${{ secrets.DATABRICKS_TOKEN }}|' \
-              -e 's|PUT YOUR THREADS|8|' \
-              ./profiles.yml.dist > ./profiles.yml \
-              && echo -e "\n      database: nam" >>  ./profiles.yml
-
       - name: "Install DBT Dependencies"
         uses: mwhitaker/dbt-action@master
         with:
