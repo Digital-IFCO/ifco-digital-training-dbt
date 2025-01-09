@@ -5,12 +5,9 @@ on:
     branches:
     - 'main'
   workflow_dispatch:
-    inputs:
-      user:
-        description: "The user where will be deployed the bundle in databricks workspace, for example gerard.torrent@ifco.com"
 
 env:
-  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+  DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN_EXERCISE }}
   DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
   DATABRICKS_BUNDLE_ENV: ${{secrets.DATABRICKS_BUNDLE_ENV}}
   USER: ${{ inputs.user }}
@@ -40,8 +37,6 @@ jobs:
     name: "Deploy Bundle"
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout Repository"
-        uses: actions/checkout@v4
 
       - name: "Install Databricks CLI"
         uses: databricks/setup-cli@main
@@ -56,7 +51,7 @@ jobs:
         uses: mwhitaker/dbt-action@master
         with:
           dbt_command: "dbt build"
-          dbt_project_folder: "."
+          dbt_project_folder: "which is the dbt_project_folder?"
 
       - name: "Deploy Bundle To Databricks"
         run: databricks bundle deploy
@@ -64,7 +59,7 @@ jobs:
 
       - name: "Deploy Profiles.yml"
         run: |
-          databricks workspace import --overwrite --format AUTO --file profiles.yml "/Workspace/Users/${{ env.USER }}/.bundle/s3_gh_action_deploy_dbt/${{ env.DATABRICKS_BUNDLE_ENV }}/files/profiles.yml"
+          databricks workspace import --overwrite --format AUTO --file [here you should add the file] "/Workspace/Users/${{ env.USER }}/.bundle/s3_gh_action_deploy_dbt/${{ env.DATABRICKS_BUNDLE_ENV }}/files/profiles.yml"
 
       - name: "Deploy DBT target folder"
         run: |
