@@ -10,7 +10,6 @@ on:
         description: "The user where will be deployed the bundle in databricks workspace, for example gerard.torrent@ifco.com"
 
 env:
-  DATABRICKS_ACCOUNT_ID: dbw-euw-bia-data-dev-01
   DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
   DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
   DATABRICKS_BUNDLE_ENV: ${{secrets.DATABRICKS_BUNDLE_ENV}}
