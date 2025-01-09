@@ -61,10 +61,6 @@ jobs:
       - name: "Deploy Bundle To Databricks"
         run: databricks bundle deploy
         working-directory: .
-        env:
-          DATABRICKS_TOKEN: ${{ env.DATABRICKS_TOKEN }}
-          DATABRICKS_HOST: ${{ env.DATABRICKS_HOST }}
-          DATABRICKS_BUNDLE_ENV: ${{ env.DATABRICKS_BUNDLE_ENV }}
 
       - name: "Deploy Profiles.yml"
         run: |
