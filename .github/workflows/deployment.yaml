@@ -23,6 +23,16 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v4
 
+      - name: Generate profile to serverless sql warehouse
+        run: |
+          sed -e 's|ENVIRONMENT|${ env.DATABRICKS_BUNDLE_ENVIRONMENT}|' \
+              -e 's|PUT YOUR HOST|${{ secrets.DATABRICKS_HOST }}|' \
+              -e 's|PUT YOUR PATH|${{ secrets.DATABRICKS_SERVERLESS_HTTP_PATH }}|' \
+              -e 's|PUT YOUR TOKEN|${{ secrets.DATABRICKS_TOKEN }}|' \
+              -e 's|PUT YOUR THREADS|8|' \
+              ./profiles.yml.dist > ./profiles.yml \
+              && echo -e "\n      database: nam" >>  ./profiles.yml
+
       - name: "Install DBT Dependencies"
         uses: mwhitaker/dbt-action@master
         with:
@@ -64,9 +74,9 @@ jobs:
 
       - name: "Deploy Profiles.yml"
         run: |
-          databricks workspace import --overwrite --format AUTO --file profiles.yml "/Workspace/Users/${{ env.USER }}/.bundle/s3_gh_action_deploy_dbt/prod/files/profiles.yml"
+          databricks workspace import --overwrite --format AUTO --file profiles.yml "/Workspace/Users/${{ env.USER }}/.bundle/s3_gh_action_deploy_dbt/${{ env.DATABRICKS_BUNDLE_ENV }}/files/profiles.yml"
 
       - name: "Deploy DBT target folder"
         run: |
-          databricks workspace import-dir --overwrite target "/Workspace/Users/${{ env.USER }}/.bundle/${bundle.name}/${bundle.target}"
+          databricks workspace import-dir --overwrite target "/Workspace/Users/${{ env.USER }}/.bundle/s3_gh_action_deploy_dbt/${{ env.DATABRICKS_BUNDLE_ENV }}"
 
