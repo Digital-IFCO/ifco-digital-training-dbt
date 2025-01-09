@@ -18,12 +18,12 @@ targets:
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
     mode: development
     workspace:
-      host: https://adb-8147723794046550.10.azuredatabricks.net
+      host: adb-1149589327075054.14.azuredatabricks.net
 
   prod:
     mode: production
     workspace:
-      host: https://adb-8147723794046550.10.azuredatabricks.net
+      host: adb-1149589327075054.14.azuredatabricks.net
       root_path: /Workspace/Users/gerard.torrent@ifco.com/.bundle/${bundle.name}/${bundle.target}
     permissions:
       - group_name: users
