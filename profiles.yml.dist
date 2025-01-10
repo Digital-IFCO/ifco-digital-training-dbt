@@ -1,0 +1,19 @@
+s3_gh_action_deploy_dbt:
+  target: dev
+  outputs:
+    dev:
+      catalog: training_dbt
+      host: ADD_HOST
+      http_path: /sql/1.0/warehouses/4a60cc3d33ff5380
+      method: http
+      schema: "s3_gh_action_schema"
+      token: ADD_TOKEN
+      type: databricks
+    prod:
+      catalog: training_dbt
+      host: ADD_HOST
+      http_path: /sql/1.0/warehouses/4a60cc3d33ff5380
+      method: http
+      schema: "s3_gh_action_schema"
+      token: ADD_TOKEN
+      type: databricks

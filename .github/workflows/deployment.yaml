@@ -43,6 +43,12 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v4
 
+      - name: "Generate Deployment Profile.yml"
+        run: |
+          sed -e 's|ADD_HOST|${{ secrets.DATABRICKS_HOST }}|' \
+              -e 's|ADD_TOKEN|${{ secrets.ASSET_ACCELERATOR_DATABRICKS_TOKEN }}|' \
+              ./profiles.yml.dist > ./profiles.yml \
+
       - name: "Install Databricks CLI"
         uses: databricks/setup-cli@main
 
