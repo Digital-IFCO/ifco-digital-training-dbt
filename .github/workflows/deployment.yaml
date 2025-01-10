@@ -8,7 +8,7 @@ on:
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN_EXERCISE }}
-  DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+  DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST_EXERCISE }}
   DATABRICKS_BUNDLE_ENV: ${{secrets.DATABRICKS_BUNDLE_ENV}}
   USER: ${{ inputs.user }}
 
@@ -40,6 +40,12 @@ jobs:
 
       - name: "Install Databricks CLI"
         uses: databricks/setup-cli@main
+
+      - name: "Generate Deployment Profile.yml"
+        run: |
+          sed -e 's|ADD_HOST|${{ env.DATABRICKS_HOST }}|' \
+              -e 's|ADD_TOKEN|${{ env.DATABRICKS_TOKEN }}|' \
+              ./profiles.yml.dist > ./profiles.yml \
 
       - name: "Install DBT Dependencies"
         uses: mwhitaker/dbt-action@master
