@@ -18,8 +18,7 @@ resources:
 
           dbt_task:
             project_directory: ../
-            # The default schema, catalog, etc. are defined in ../dbt_profiles/profiles.yml
-            profiles_directory: dbt_profiles/
+            profiles_directory: .
             commands:
             # The dbt commands to run (see also the dev/prod profiles in dbt_profiles/profiles.yml)
             - 'dbt deps --target=${bundle.target}'
