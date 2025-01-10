@@ -45,8 +45,8 @@ jobs:
 
       - name: "Generate Deployment Profile.yml"
         run: |
-          sed -e 's|ADD_HOST|${{ secrets.DATABRICKS_HOST }}|' \
-              -e 's|ADD_TOKEN|${{ secrets.ASSET_ACCELERATOR_DATABRICKS_TOKEN }}|' \
+          sed -e 's|ADD_HOST|${{ env.DATABRICKS_HOST }}|' \
+              -e 's|ADD_TOKEN|${{ env.DATABRICKS_TOKEN }}|' \
               ./profiles.yml.dist > ./profiles.yml \
 
       - name: "Install Databricks CLI"
