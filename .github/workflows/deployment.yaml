@@ -67,7 +67,7 @@ jobs:
 
       - name: "Deploy Profiles.yml"
         run: |
-          databricks workspace import --overwrite --format AUTO --file [here you should add the file] "/Workspace/Users/${{ env.USER }}/.bundle/s3_gh_action_deploy_dbt/${{ env.DATABRICKS_BUNDLE_ENV }}/files/profiles.yml"
+          databricks workspace import --overwrite --format AUTO --file profiles.yml "/Workspace/Users/${{ env.USER }}/.bundle/s3_gh_action_deploy_dbt/${{ env.DATABRICKS_BUNDLE_ENV }}/files/profiles.yml"
 
       - name: "Deploy DBT target folder"
         run: |
