@@ -37,6 +37,8 @@ jobs:
     name: "Deploy Bundle"
     runs-on: ubuntu-latest
     steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
 
       - name: "Install Databricks CLI"
         uses: databricks/setup-cli@main
