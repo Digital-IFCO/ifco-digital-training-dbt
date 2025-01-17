@@ -5,6 +5,9 @@ on:
     branches:
     - 'main'
   workflow_dispatch:
+    inputs:
+      user:
+        description: "The user where will be deployed the bundle in databricks workspace, for example gerard.torrent@ifco.com"
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
