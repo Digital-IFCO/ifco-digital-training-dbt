@@ -1,16 +1,8 @@
+name: "training_dbt"
+version: "1.0.0"
 
-# Name your project! Project names should contain only lowercase characters
-# and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
-name: 'training_dbt'
-version: '1.0.0'
+profile: "training_dbt"
 
-# This setting configures which "profile" dbt uses for this project.
-profile: 'training_dbt'
-
-# These configurations specify where dbt should look for different types of files.
-# The `model-paths` config, for example, states that models in this project can be
-# found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -18,16 +10,34 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-clean-targets:         # directories to be removed by `dbt clean`
+clean-targets:
   - "target"
   - "dbt_packages"
 
-
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
-
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
 models:
   training_dbt:
+    +materialized: table
+    staging:
+      +schema: staging
+      +docs:
+        node_color: green
+
+    intermediate:
+      +schema: intermediate
+      +docs:
+        node_color: "red"
+    mart:
+      +schema: mart
+      +docs:
+        node_color: "AE2012"
+
+seeds:
+  +schema: seeds
+  +docs:
+    node_color: "blue"
+
+sources:
+  +materialized: table
+  +schema: seeds
+  +docs:
+    node_color: "cyan"

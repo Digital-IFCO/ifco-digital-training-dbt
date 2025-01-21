@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: stg_journey_patterns
+    description: > 
+      This staging model captures various attributes related to different
+      journey patterns, which are critical for analyzing customer journeys
+      and behaviors. It serves as an intermediary layer before data is
+      transformed into analytics-ready forms. 
+    tags: []
+    columns:
+      - name: journeyId
+        data_type: INT
+        description: A unique identifier for each journey pattern. 
+      - name: journey_locations
+        data_type: ARRAY
+        description: > 
+          A list or array of locations associated with the journey, indicating
+          movement points. 
+      - name: journeyClassification
+        data_type: STRING
+        description: > 
+          Categorical classification of the journey, denoting types or
+          categories of journeys. 
+      - name: includeFirstLocation
+        data_type: BOOLEAN
+        description: > 
+          Boolean flag indicating if the first location of the journey should be
+          included in analyses or calculations. 
+      - name: includeLastLocation
+        data_type: BOOLEAN
+        description: > 
+          Boolean flag that specifies whether the last location of the journey
+          is to be included in analyses. 
+      - name: journeyType
+        data_type: STRING
+        description: > 
+          Descriptive type of the journey, providing context about its nature
+          (e.g., leisure, business). 
+      - name: region
+        data_type: STRING
+        description: > 
+          Geographic region designator for the journey, helping to discern
+          location-based patterns. 
+      - name: partner
+        data_type: STRING
+        description: > 
+          Identifies the partner associated with the journey, which could
+          pertain to business collaborations or service providers. 
+      - name: beforeStartGroupId
+        data_type: INT
+        description: > 
+          Identifier for the group of journeys preceding this one, facilitating
+          sequencing and dependencies. 
+      - name: startGroupId
+        data_type: INT
+        description: > 
+          Identifier for the group to which this journey belongs, indicating
+          common attributes or categorizations. 
+      - name: endGroupId
+        data_type: INT
+        description: > 
+          Identifier for the group of journeys following this journey, allowing
+          for analysis of subsequent actions. 
+      - name: afterEndGroupId
+        data_type: INT
+        description: > 
+          Identifier for any additional groups occurring after the journey's
+          end, helping to map extended behaviors or transitions. 

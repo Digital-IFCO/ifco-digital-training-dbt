@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_sensors
+    description:
+      This model is part of the staging layer, responsible for transforming
+      and preparing data from the sensors seed for further analysis and use in downstream
+      models.
+    configs:
+      tags: s06-metrics
+    columns:
+      - name: sensorId
+        data_type: STRING
+        description: The unique identifier for the sensor.
+        tests:
+          - unique
+          - not_null
+      - name: assetId
+        data_type: STRING
+        description: The identifier for the asset to which the sensor is attached.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_visits')
+              field: assetId
+      - name: attachedAt
+        data_type: TIMESTAMP
+        description:
+          The timestamp indicating when the sensor was attached to the
+          asset.
+        tests:
+          - not_null
+      - name: attachedTill
+        data_type: TIMESTAMP
+        description:
+          The timestamp indicating when the sensor was detached or is expected
+          to be detached from the asset.
+        tests:
+          - not_null
+      - name: sensorTechnology
+        data_type: STRING
+        description: Describes the technology used in the sensor.
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - GPS
+                - BLE

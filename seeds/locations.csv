@@ -1,0 +1,291 @@
+region,locationType,ifcoSystemPartner,locationTag,locationName,extLocationId,countryName
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Vialonga,f0108b53-c5fd-4fa1-99c0-40800d8430b0,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Fabrica do Cobre,789cfadd-4dd4-4f2e-a30b-d7c8ce6ba42d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Acquaroma,885fdd9a-26ac-4e3b-9e92-416995615f95,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Vila Conde Outlet,a0f59557-1fe5-4bca-bc45-f5be54834373,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Porto - Av. da Boavista,180e09fb-e54a-4003-bd48-320381b9ac76,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Torres Novas,31857f80-7a16-4bb7-b38d-7a66ed0095e9,Portugal
+EU,Producer,null,PRD,Horticolas da Fundacao Unipessoal,805f6097-f02f-4337-9b4c-11684302721b,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Cacem,ce03b702-9a94-4842-8618-75be93f17f99,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Rio Maior,1d68c6fe-eee7-41d9-8e72-9da4471d135b,Portugal
+EU,Producer,null,PRD,CALCOB Coop. A.L.C. Oliveira Bairro,17e86505-c4d4-4202-9e8e-a8fdeb93db6e,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Amial,30a864b7-a06f-48db-bf1f-9bb395a78020,Portugal
+EU,Producer,null,PRD,Perugel - Soc. Comercial de Carnes,bb9f30f3-76b2-4f26-a1dc-12fb403a16b3,Portugal
+EU,Producer,null,PRD,Alcino Monteiro Fernandes Vagos,09ce03c1-5312-469e-b13b-e51972e17640,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Vagos,cc59896d-d464-4ef0-b18c-1d604e81ea31,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Rua da Palma,f9c32941-3180-40ed-93a0-0b90e02870ae,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,AUCHAN MAIA - 26,69cc3370-4620-45f0-a8c8-2f5fd27879dd,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Maia Jardim,408a8836-bc46-4814-9513-81b1a4e43018,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Bombarral,1deb3499-30cc-43cd-bf60-5c6f1ecb5752,Portugal
+EU,Producer,null,PRD,LUSOFRUTA,4c1461e3-5433-4386-85c4-3d1fab18dc02,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Matosinhos Sul,42538fe0-d493-4250-a6c1-bef255b5081a,Portugal
+EU,Producer,null,PRD,Simples e Frescas Lda.,3e11aca7-21eb-4b67-8c1b-266ab80d69ae,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Faro - Montenegro,206594fd-19ae-4bad-b9de-b6a43030f7e9,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Sao Joao da Talha,fe097650-1718-4075-804d-d5fe6f758a29,Portugal
+EU,Distribution Centre,Transaire,DC,Transaire Alverca,0643f92d-2f85-4983-9d0a-38966053f7c1,Portugal
+EU,Producer,null,PRD,Pec Nordeste - Indústria de Produtos,ac4678d1-d5b6-4047-a138-d40d2de8526a,Portugal
+EU,Producer,null,PRD,"Hortijafer Unipessoal, Lda.",c846d417-dbb5-4f1a-b05a-95dae781b83c,Portugal
+EU,Producer,null,PRD,Horticolas Saturnino Lda.,2e423d35-d60f-409d-bfe3-e91bb3344745,Portugal
+EU,Producer,null,PRD,Andre Filipe Pereira Simas Couto,f9fe83bd-8be1-415a-b041-7e0e8bd06884,Portugal
+EU,Shop / Point of Sale,Sonae,POS,CBD PAREDES CENTRO - 5739,afeee59d-052d-49fa-814c-b46d16cb94fa,Portugal
+EU,Producer,null,PRD,Avipronto Produtos Aliment. S. A.,29c26275-95f0-4df8-9232-86e4d697eebf,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Maia,a1ba5222-4dfb-41f4-b219-1d58993e7efd,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Oia,e6d4daee-92e7-4f94-95b7-4d34bcee8fc3,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Alto do Lumiar,b56aa892-2d4b-4856-9f46-56dfed36f290,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Braga,d275b6e6-b4b4-4043-a951-371f1b04025c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Anadia,d53e22e3-b7bc-423b-b940-af4928ffec1a,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Camara de Lobos,0586d235-3686-469b-b7b3-a894dbd4da68,Portugal
+EU,Producer,null,PRD,"NLS COM ? Comercio de Horticolas, Lda.",c6729292-5281-4307-8fe4-049e256a125d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Campo 24 agosto,5d38cc42-545e-4e61-a91d-f9c4c19b9ebc,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Telheiras,1fd11347-2fe9-48e6-9b30-27234ef6fd8d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Setubal - Estrada de Palmela,d46127b3-9b7b-4532-b069-5b685520462d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Sao Joao da Madeira,e39b4e3b-3cee-4440-9889-89cd5c1061e7,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Darque,62cd2761-ea7a-4af8-982d-6a5d7fbd1c8f,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,AUCHAN ALFRAGIDE - 25,f1a02deb-3782-44bf-9dab-38e262ab1af3,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,MA Almirante Reis - 409,a946fba8-8881-40ca-be44-2d456598953f,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Beja,164b231c-5b1a-4bdc-adb3-7f5acb9696a0,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Santo Tirso,aa845b38-455a-4a96-a779-97a071a68ea7,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Albufeira,0c32c3a4-325b-4f8d-929b-7816bd0c7b87,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Alverca,6178029e-a40e-4198-8864-cbcd153f7eee,Portugal
+EU,Producer,null,PRD,Horticruz Armazenista Lda,070f8be4-fbaa-4595-8271-7d5578801efe,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Abrantes,d4b8c705-18c1-48d6-bc2f-176238887b16,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Laranjeiro,22fe6960-9168-4ca5-b063-f985130a61f1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Evora,83759ba2-5ce4-46b8-a062-abdb4172024c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Praia da Vitoria,ab53f0fc-1b6a-472c-80bf-c4d7455208c1,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,AUCHAN COINA - 19,0f5dc0f7-134b-4f9d-9221-9095d6739d78,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Faja de Baixo,0557ce11-82bc-48a9-9862-ede0cdf46f5e,Portugal
+EU,Producer,null,PRD,Planicieverde - Soc. Agricola Lda.,55456833-531c-4779-817c-e370368bf252,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Sesimbra,4f649813-6cbd-4777-a6e9-2b3a7f506e91,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Tires,a70bcb7a-cad4-4351-8106-fd7f2b36bdb3,Portugal
+EU,Producer,null,PRD,"NLS COM – Comercio de Horticolas, Lda",25d06492-38c8-4669-a4f7-6ed48eb332f6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Mozelos,b3579ce4-9d6d-4ada-9cce-d3dc7d493b81,Portugal
+EU,Service Centre / Wash Centre,null,SC,IFCO SC Wellingborough,72e07c53-4683-4fc6-a29b-b3c7535840b3,Great Britain
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Barcelos,a07b442e-44be-43c3-bb60-dda88129c9ca,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Cascais,2efc2888-68a2-430b-8d98-095ab1a27d28,Portugal
+EU,Producer,null,PRD,Oliveira Pinho & Filhos,1ad73ecf-6051-454c-8052-1841d01b8e5b,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Montijo,827c3d85-e9ec-487c-88a4-12f2847cb459,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Arrabida,dfdaf82e-dcb8-4584-8b8e-5a0c8624bcfa,Portugal
+EU,Producer,null,PRD,Margarida Maria Ribeiro Unip. Lda.,3dfe85f4-b4a6-400e-ac51-4a4d3d78eb17,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Lisboa Av. Republica,363de175-d133-4e41-81b3-1939f078cf4d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Viana Castelo,4199fc5b-00a8-4d2b-ac14-33ace242cff4,Portugal
+EU,Producer,null,PRD,Alhos Mateus,1f072cc8-dc97-4176-89c1-a58c1d954ff9,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Leiria,55c08234-21e5-42e9-8126-f8cf7c7556b0,Portugal
+EU,Producer,null,PRD,Kilom SA,3aa161b0-f82b-44b1-bbf2-2c2311252fd1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Lisboa - Marechal Gomes da Costa,9018f1b0-0356-4d0c-b4fb-eaabfc0498e9,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Montemor-o-Novo,d82b3d82-ae12-45e5-b3e4-2deaf1160deb,Portugal
+EU,Shop / Point of Sale,Sonae,POS,CBD FRANCELOS,9910b4bd-56c7-4f96-9474-71094443236d,Portugal
+EU,Producer,null,PRD,Interaves-Soc. Agro-Pecuria S.A.,f42085f3-b41b-4198-bade-4255ffbe69e0,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Carlos Mardel,62db156e-3be6-451f-8b89-8a3959ca8c12,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Ponta Delgada,67532580-2294-4889-9d82-b6d7135876a0,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Antas,75c1fb71-8c6c-40b2-9cfd-de04ac9090cf,Portugal
+EU,Retailer Reverse Logistics,Morrisons Supermarkets PLC,RRL,Morrisons Sittingbourne RRU,93fbd184-6675-40da-b501-58f012480610,Great Britain
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Quinta do Conde,bb895d58-57da-41aa-8ee8-179a8f689692,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Monte da Caparica,f8d803eb-eedf-4478-9701-3b7378a2910d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Guimaraes,57c6175a-3c62-42f8-bf02-6f0b1f28c673,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Belas,89516ebb-582d-4717-a068-4d445ea05ccd,Portugal
+EU,Distribution Centre,Transaire,DC,Transaire Mira de Aire,f4e44633-1d09-405d-97a0-e362a0496186,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Canidelo,12de2743-3f0f-4ed2-9f32-b5b5d9ca9f65,Portugal
+EU,Producer,null,PRD,100% Titular Lda.,a733f017-fcad-4b71-ab57-dd37336306e8,Portugal
+EU,Producer,null,PRD,Jorge Evaristo Lda.,35a0f319-5541-406c-ae07-9f01b16cf406,Portugal
+EU,Producer,null,PRD,Luis Miguel Vitorino,05b7aebd-8b36-42e4-9f79-07128f1a34f4,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Moura,824d336d-78de-4af1-ab2e-bd2622637995,Portugal
+EU,Producer,null,PRD,ZOLVE ABP,ecc5755a-8e17-4798-8149-d2fadee17828,Portugal
+EU,Producer,null,PRD,Quinta do Celao II Lda.,4c5f0e66-e9d0-4995-b69c-493716487418,Portugal
+EU,Producer,null,PRD,Hortisopa Unip. Lda.,ec45c79b-216b-4151-8626-c8478412355f,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Santa Maria das Lamas,5fc80232-19d3-41ca-8dab-771db844b3e4,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Condeixa-a-Nova,438874cf-57f3-41df-b1c4-9391f2209de6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Loule,05e73e77-19c2-4b84-b0c7-a2fd887beceb,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Mafra,bf7183a3-dd84-42df-b860-ed0c616678c4,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Coimbrashopping,110986a3-e21e-4a20-9ec6-911ec8357d38,Portugal
+EU,Potential Theft Site,null,PTS,"ETEPal, Lda",d4e8bfac-3524-4034-a066-545b2e1cbd6b,Portugal
+EU,Producer,null,PRD,Estevao Luis Salvador Lda.,d634fb7f-7e6e-4220-a430-f2aff493609a,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Meu Super Ponta da Garca,a0c4e1e6-687f-4cfe-925b-6f9d0cacdfbe,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Sintra - Lourel,808670eb-ab39-4ea9-b667-d8035fb8e99d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Duque Loule,2fe25f93-3a23-4579-8cf6-a5ac2cff580d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Torres Novas,28f84801-616d-4d7f-b85a-c31b6dc8dac4,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Marinha Grande,d2a8c220-cc08-43b8-9799-3cd4f9879a8d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Oliveira de Azemeis,096b227b-a3f9-46f7-bf10-f7e76f47fc24,Portugal
+EU,Asset Recovery,null,AR,Banco alimentar de Alcântara,e4e2c336-bc47-4fdf-8f1e-a4dd59556bd8,Portugal
+EU,Shop / Point of Sale,Sonae,POS,MS TAVEIRO (CBR) - 1806,84a6fa3e-ca0a-49a9-a8f7-935b09e7e118,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Portimao,7f4583b9-087b-4085-81bf-3d21aadfb48c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Capelas,3368144d-5943-4229-9751-fbc88d7457f2,Portugal
+EU,Distribution Centre,Sonae,DC,ENTREPOSTO DA AZAMBUJA,bc519fd7-4df7-4dac-8c4f-01abb5d1fe69,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Aveiro,8d2103fa-0795-4721-8484-1b8bf0cc4dbd,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Paredes,386fa441-23d7-49da-adb5-67bbe66d9ebc,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Ribeira Grande,aff030a9-be60-43fe-9298-dca4ea82547d,Portugal
+EU,Producer,null,PRD,AC – Estrada Hortofruticolas Unipe,24f260d9-0c35-4818-9497-19c4acd1f8f9,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Rebordosa,d41a19a0-a896-4f15-8362-01586ccf0893,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,AUCHAN MATOSINHOS - 16,af46ae89-8e45-49a5-aac1-f796c14bdac6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Covilha,4cfd582e-4590-491b-9bad-69afe1605650,Portugal
+EU,Producer,null,PRD,Modelo Continente Hipermercados (CB,eeb68f8f-db14-4ec3-87f4-38621dc3e26f,Portugal
+EU,Shop / Point of Sale,Sonae,POS,MH PORTO ALTO I - 965,586e72d1-3566-4d1e-b030-89f6e5e842d7,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Portela Sacavem,71b60d27-d388-426b-82fa-78755b7550e6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Braga Arcada,2438f90c-2ea5-4b0d-b1ab-6a07b9824d93,Portugal
+EU,Producer,null,PRD,"CampotecIN, Conserv. e Transf.",8c0fb69a-2dd4-4e1c-8423-33ac6720e2e2,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Pinhal Novo,e227c2db-e6d5-4dee-a515-d233fdb4e735,Portugal
+EU,Shop / Point of Sale,Sonae,POS,MDL S. Carlos - A�ores - 1075,c51d6cbf-d9db-47bb-a156-dd3cfbe1c035,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Porto - Mota Pinto,adeb7159-c745-4822-94b1-e5c410b5d73e,Portugal
+EU,Producer,null,PRD,Antonio Manuel Martinho Claro,ac439e89-9f2b-4e99-9836-67a91233a28c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Ourem,57be019e-61fb-4a7e-a107-073baa98a5ee,Portugal
+EU,Service Centre / Wash Centre,null,SC,IFCO Wakefield Washsite,fdf3b161-1dc7-4ad9-a636-4d37be5dfddd,Great Britain
+EU,Distribution Centre,Cooplecnorte,DC,Cooplecnorte CAT Account,0f7e1cef-de1b-41e1-bffa-a4142f605bfd,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Mirandela,0d6c748c-144b-4832-ac80-baad167c1228,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Boucinhas,44f0f4aa-01bc-4087-95ca-8f44391224c1,Portugal
+EU,Producer,null,PRD,Alcides Catroga Lda.,a9619fa2-55f5-47c4-b8c5-54a6f62e2fdd,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Felgueiras,d1669367-b734-40a8-ae84-801593719440,Portugal
+EU,Retailer Reverse Logistics,Morrisons Supermarkets PLC,RRL,Morrisons Bridgewater RRU,8de85419-0446-4e88-bcea-fd7e55046492,Great Britain
+EU,Producer,null,PRD,Sohi Meat Solutions,c6e8c527-c5e4-4140-bb5f-696d13256fb6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Vila Nova de Santo Andre,a27b3a03-e87d-45fa-a868-d17417c624df,Portugal
+EU,Producer,null,PRD,Masterfruits Com. de Frutas Lda.,ed52c698-0e81-422f-92a3-bfe31809c12c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Esposende,0ec4ce09-9ab3-46f2-8042-9dcd0defa9d1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Loule,1e4617b5-e92f-4e67-9180-7d4d04c427e7,Portugal
+EU,Service Centre / Wash Centre,null,SC,IFCO SC Coventry,86582954-dd1c-4a06-b8e3-0de457bf2b17,Great Britain
+EU,Producer,null,PRD,Marilia Cruz – Unipessoal Lda.,7f413aa1-2b07-4b29-8400-2c5e03cda434,Portugal
+EU,Distribution Centre,Sonae,DC,ENTREPOSTO DE PONTA DELGADA,7a5dd89e-0db9-40ff-af81-4db0f5086e66,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Padrao da Legua,866a550b-aada-45c1-a123-81ee0b59b9c1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Fafe,55889d62-4927-47e1-b12c-b79115eb81a6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Olhao,c66bbb97-f4d5-4498-a584-c689a4b65525,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Mem Martins,f928c27a-4e46-4ac1-b8de-d2445fa0a14e,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Gandara dos Olivais,753f31c0-8345-453f-9c03-6e327ee8bbd2,Portugal
+EU,Producer,null,PRD,Antonio Medeiros Cordeiro SU Lda,206b624f-9d76-4331-9f58-058eacd2c313,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Horta,f03097d7-b8e5-4d8c-8940-59e8bfa5dabb,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Moita,a675aa7a-f02f-4951-b586-524a683a7e42,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Torres Vedras,6b0df080-1748-4e67-9da3-42471b41776e,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Cruz de Pau,72f2074b-fdfa-4996-83fe-41b29d03dcb2,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Vendas Novas,b33ce8bb-ded4-4040-aa5d-91f3fe77ec2b,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Castelo Branco,fa34ed95-3db0-4331-af56-2fabab39eca8,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Colombo,be221d1d-7b78-4950-9154-08342ac84417,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Meu Super Calendaria,533d0388-3804-423c-b6c6-93ecc42b7b25,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Montelavar,02151dfb-7163-4405-b6dd-8bba2b509b34,Portugal
+EU,Producer,null,PRD,Horticolas N & D Lda,a1a2a231-57bd-477b-8913-7b3759238943,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,PA Penamacor - 710,de97490b-3382-4d23-992f-81ea62d51e1b,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Forum Coimbra,65d1e6d9-c835-4d48-8a74-ae58647d7321,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Beja Retail Park,5ec8d439-7655-4bc6-9fd9-3f8282b8e851,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Gaiashopping,e6513e56-3d63-4eea-8d12-eda7d3227f70,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Charneca da Caparica,8e5e1481-3f1c-4eb5-92ef-5c4fc103aac1,Portugal
+EU,Producer,null,PRD,(ANL) Frutorbel - Frutas Lda,c6193388-135e-478a-826a-27780a5c4877,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Portalegre,5fa8109f-a61b-4635-970d-020778c9267e,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Avanca,3d3a2321-ce71-448c-9bf3-136c47fde360,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Angra do Heroismo,b3894171-4a49-4875-a71a-106154d8832f,Portugal
+EU,Service Centre / Wash Centre,null,SC,IFCO SC Azambuja,6dca197e-9982-46db-8c22-500bca463c3e,Portugal
+EU,Distribution Centre,Sonae,DC,ENTREPOSTO PHARMA - DHL VIALONGA,6c2da594-a372-4470-9f45-6cda9a752d03,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,AUCHAN GONDOMAR - 35,596a2065-5731-4633-b29a-a4f393ef95c6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Trofa,6a21e2ae-3983-41f1-8712-161184e77c7e,Portugal
+EU,Producer,null,PRD,Primohorta -Soc.de Prod Hortico Lda,c9d844dd-5a46-47d6-879b-6fafd2d3342a,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Portimao 2,c387c002-de48-4a52-adde-0ac85e5f83dd,Portugal
+EU,Producer,null,PRD,Hortosintra Lda.,0036758f-1377-4445-a21f-0eba0d7c4ef5,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Meu Super Povoacao,4c3b455a-7380-40a6-beda-8be39a774149,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Caldas da Rainha,d2ad5855-476f-45c3-a3ac-8e0c3e612120,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Avintes,d446a8bc-083f-48c8-98ed-a42edc9b1e43,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,AUCHAN SANTO TIRSO - 30,0a03cd99-c59b-4c52-ae7d-5293469e4848,Portugal
+EU,Shop / Point of Sale,Sonae,POS,CBD POUS SARAMAGOS - 8442,998365f6-af57-4947-b5c3-6283bf4fb775,Portugal
+EU,Producer,null,PRD,(ANL) Figueira Lda.,24610edd-821b-400f-8bd1-1a186c8d2684,Portugal
+EU,Distribution Centre,Sonae,DC,ENTREPOSTO XD GUIA,55d92038-8aea-4bd0-9cd4-81e3121e93db,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Lavra,659aa515-5f2d-4d27-be1f-9618951685c1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Alhos Vedros,dd998fb0-c45d-4024-ba47-f19d70634152,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Ermesinde,e61dcf86-7fca-4ede-a447-d2f234b5dd69,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Loureshopping,ce012524-87c9-4e04-ac4d-ad67e03740ba,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Alfragide,0b8560be-27a8-4151-814a-d351b35fd150,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Quarteira,5f68c01e-6c73-47f7-be13-75f289382746,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Carcavelos,8335d02b-b105-4d86-8531-48e78de25fbf,Portugal
+EU,Distribution Centre,Sonae,DC,ENTREPOSTO LISBOA E-COMMERCE (CDL),becee1b5-952d-45e6-801f-68b06b048c9a,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Montijo,f1e578c2-279d-4d23-b657-5764cb5f3cf4,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Fanzeres,8f3d91a8-9b2a-438f-87cc-d3552e3353ed,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Tomar,b34cbae3-e08b-43d1-8b70-d5dc76e9f6b1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Fiaes,a4d3c469-5715-4ea7-9217-cef6ef709b5e,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Grandola,38b70d49-4cd0-4c09-94d3-1f1bb003cd33,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Alges,51284b6a-a00f-452b-ba71-8adea7b8c93b,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Cova da Piedade,10774c08-7ca0-4c8a-ae57-29140764859c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Meu Super Pereira,a8697231-a9d8-4554-80d1-0c8947aafe1b,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,AUCHAN ALMADA - 12,56cb7b0f-68e2-4bef-8dd3-eecb405cc133,Portugal
+EU,Producer,null,PRD,Fairfruit,7261d58b-be18-4b50-9e92-6ec18103b711,Portugal
+EU,Distribution Centre,Sonae,DC,ENTREPOSTO DA MADEIRA - Agua de Pena,f1e7a628-8b39-4575-a4d6-328fd4d97099,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Lisboa - Barbosa du Bocage,3f39e0ec-8620-456e-8fc7-ee9686de8fb5,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Ovar,8bda5040-cdf4-450e-ab45-ba6354d5045b,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Lousada,128491aa-abd0-4547-aa8e-743bfcaa5267,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Golega,5e213386-9e1f-4540-b78c-6c4050b60d4c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,CBD GAFANHA NAZARE - 2608,fb5dfd29-0dd0-487b-8c8c-fc604de8c773,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Seixal,0df5abe4-ab18-42bc-a046-e00f8eeb6fe3,Portugal
+EU,Producer,null,PRD,Eporifrutas SA,22890927-088b-48c6-b035-a1e5c18c54c2,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Buarcos,8aba91cf-e3ca-4d51-a4bd-c3d1df85b8c8,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Santo Antonio dos Cavaleiros,2ddef971-cca6-4216-b55d-23a67428a466,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Cantanhede,b4718a8f-1fe1-4ca3-9ef4-093227740d9b,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Serta,3c802843-40fe-4a93-bfd8-f5c8e0869e08,Portugal
+EU,Service Centre / Wash Centre,null,SC,IFCO SC Warrington,78b54a29-ab16-46df-a142-7b2bf3da5e32,Great Britain
+EU,Shop / Point of Sale,Sonae,POS,Continente Oeiras,b53a8f6c-2357-4030-92df-e30d302edc25,Portugal
+EU,Producer,null,PRD,PAM Prod. Distrib. Hort. Lit. Lda.,cc01190a-102a-4552-8ec4-251166880981,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Porto - Rua Serpa Pinto,1eece457-4f3f-4bfd-9c58-c9362ae7effb,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Braga - Quinta das Portas,54109d51-3d13-4c4c-b6ac-e965d1f053f2,Portugal
+EU,Shop / Point of Sale,Sonae,POS,CBD 800 PEVIDEM - 2252,629121a3-0b41-48c8-93ed-753c6c8f6dcb,Portugal
+EU,Retailer Reverse Logistics,Sonae,RRL,Xdock MS - Logifrio Riachos,420b78bc-5bc0-4ee1-ae33-c4376f5eec2d,Portugal
+EU,Producer,null,PRD,Hortafina Prod. Hort. Lda.,36d5b21f-f97f-4369-be35-d61c9663748f,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Ponte de Lima,28583f9b-9bc7-49d4-90c4-81f9ece9b6e6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Ponte de Sor,a769e1d8-a74e-4355-bae4-c76357f29b72,Portugal
+EU,Shop / Point of Sale,Sonae,POS,MDL SEIXAL,1f038e7a-6875-4f04-b6cc-71a7f0980dc5,Portugal
+EU,Producer,null,PRD,FRUBACA - Coop. de Hortof.,486b9b02-ce52-43b2-a90a-8edb732d73d9,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Carvalhos,74df275f-567e-40dd-943d-c14715e5af62,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Ovar,aa9fa031-cfb7-4e0c-8673-3d1c9193af59,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Sao Felix da Marinha,982fec5d-1327-4648-9401-e92e022f8cad,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Povoa do Varzim,2baab31d-6c54-4a0b-a212-825f16da0f3e,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia General Rocadas,21ab97c2-afb2-409d-af88-c513b9526192,Portugal
+EU,Producer,,PRD,Firmino Canteiro Lopes,10236e5e-c8a0-4406-840a-1a2fe0fb70a3,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Monte da Virgem,d1957976-8536-4759-adfd-45f2480a00f1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,MS MELRES,f1bbd4f6-0794-4a67-8650-f83da48aaf0d,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Estoril,e85c4aed-8d87-47b8-a331-c69459ff2930,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Aveiro,a6f64b22-96e0-44f7-88a2-7331aef10131,Portugal
+EU,Producer,null,PRD,OPCAO Producao Horticola,5ded335e-ad79-471a-bea0-64a46b93878c,Portugal
+EU,Service Centre / Wash Centre,null,SC,IFCO SC Nuneaton,8e5ad46e-5e7e-45c1-8283-2de541e233af,Great Britain
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Valenca,a52371f4-a76f-4cd9-9c60-eabe5de829f6,Portugal
+EU,Producer,null,PRD,Quinta do Olheiro Lda.,2f3e9e97-5a8f-461c-86f7-7e73d030b331,Portugal
+EU,Asset Recovery,null,AR,Banco Alimentar Porto,364e40f2-b0c8-4fce-bef2-3581832b33a0,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Matosinhos,45009f89-5b5b-4cb0-bc62-ac9ddef0fdf4,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Estarreja,f532f23f-64a4-4813-8387-77c8045964d5,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Vila Praia de Ancora,1f7083a5-207b-4ba7-a9cc-dc13b7af680e,Portugal
+EU,Producer,null,PRD,Lusiaves S. A,ae317a1c-dc16-4efb-be5c-5d2e60a2c1b1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Alta de Lisboa,b4986f29-0f48-4f8e-aa25-bcc262d7393f,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Baguim do Monte,8f4f6abc-052e-468f-bd25-b90b8074a19e,Portugal
+EU,Producer,null,PRD,Mario Joaquim Parcelas Perpetuo,d53603db-2778-43f2-8c0c-7cd62add3347,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Lisboa - Santa Quiteria,9e6a3ec4-a358-4027-88af-da879019b6ff,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Mangualde,2de77c14-79f3-436c-8090-2e0100071ea1,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Tavira,8d635e75-c41f-4f38-ab05-067281305756,Portugal
+EU,Producer,null,PRD,Vintage Fruit Lda.,15caa6c1-9420-47fc-b7c7-c810aa6ec54d,Portugal
+EU,Producer,null,PRD,Morrisons Manufacturing Flaxby,8e541bde-72f9-4282-9544-84ef4b9727f3,Great Britain
+EU,Producer,null,PRD,Hortapronta - Hortas Do Oeste S.A.,4d0c645c-d7ce-447d-8fab-ad69aea5f4f3,Portugal
+EU,Retailer Reverse Logistics,Sonae,RRL,Xdock MS - Steff Alenquer,c239f5c4-d0ea-4598-90bf-768041f679ac,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Esmoriz,695440f7-f4a9-4e76-ae6a-56ed5856c2ca,Portugal
+EU,Producer,null,PRD,Hortaiberica Lda.,8ba2addc-2230-4ec3-8c85-43f5182a71ad,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Braga,a2e84d23-ce9b-4c5d-b0a9-563d65332b53,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Alcobaca,12008724-3984-4037-b054-bfb5f9168011,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Cartaxo,da322b21-e666-47d1-b5dd-5874c086cab1,Portugal
+EU,Producer,null,PRD,"Hortalmarginho, Lda",0b458b25-115c-4be6-923e-6d28db3e0a24,Portugal
+EU,Distribution Centre,AUCHAN,DC,Auchan Retail TORRES NOVAS,aeb199c8-1560-4d1e-aec0-a1b64a91c30f,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Lisboa - Defensores de Chaves,30c368fa-d801-44ca-81e8-ea7ad9604817,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Chaves,4ffe91c9-2a2b-425a-9c3b-eed5aba8312b,Portugal
+EU,Producer,null,PRD,J.M. Saldanha - Comérc. Prod. Hort.,5a5e0b9e-e4f9-4075-a658-58c24b941810,Portugal
+EU,Producer,null,PRD,Beyra D’Ouro Fresh - Frutas Cruzeiro,a9f6b878-ae53-4347-bac5-ac1ada95c2d6,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Retail Park Viseu,dbf03817-e8b1-4a37-bbf4-c91ee6a7d6e0,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Gaia (Rechousa),88363e85-6df7-4066-8fc5-0c0edec8bec9,Portugal
+EU,Producer,null,PRD,Batatas Mirense Lda.,cc66e6db-e2d3-4275-a27c-809a0f797781,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Santo Antonio,ef6e3aa4-3399-4745-9c49-93791bfbba2e,Portugal
+EU,Distribution Centre,Morrisons Supermarkets PLC,DC,Morrisons Latimer RDC,5ec73d7e-f5d8-49df-9c33-d020b4b2a861,Great Britain
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo VR Santo Antonio,d754c34e-bd05-48f0-b74b-37776e0cbd2a,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Celeiros,4c618cc2-7417-42ff-877f-cbad8a2bdc88,Portugal
+EU,Producer,null,PRD,Campoaves - Pro. Ext. Aves Lafoes,90baf0f8-57bc-4bee-83d2-46d32770f8d2,Portugal
+EU,Shop / Point of Sale,Sonae,POS,CBD 800 OLIVEIRA FRADES - 1484,6c4f69fd-111d-4d9e-b72c-1da3a09f6e2d,Portugal
+EU,Producer,null,PRD,Origem do Campo,a8226b69-c29c-43c5-9875-88589367bf0e,Portugal
+EU,Shop / Point of Sale,AUCHAN,POS,MA Alvares Cabral - 440,eeccdc94-932d-4b2a-a979-a49401596bf4,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Meu Super Vitoria,42bed779-474b-49d5-a70b-e3d4b1851852,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Porto - Asprela,1d69d3e1-7003-4f97-a495-5bb91ea0f236,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Carregado,dcea2125-aa71-40b3-8d78-838df3ec06d4,Portugal
+EU,Distribution Centre,Sonae,DC,ENTREPOSTO DA MAIA,6d59112a-ee11-4aa7-8c9b-cd0a8db9c65c,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Maia,e63fb823-21de-414b-bd5a-d76efd33cc11,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Santarem,13acdc3a-01d6-4ebb-9c69-5d58d89afee2,Portugal
+EU,Producer,null,PRD,GL International Food SA,3b9f8d3a-ff2d-48a9-b4bf-a741613f7a76,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Seia,c025ffba-a000-4d71-bd8c-4d4c8479e908,Portugal
+EU,Producer,null,PRD,Horfil - Hortas Finas Portugal Lda,3e9cb2a0-22c9-425d-8db7-1dd276fab9cd,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Viseu,3b517908-27c1-4588-9b10-371c2b9ede84,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Bom Dia Povoa do Lanhoso,ead6e390-ff21-445d-acea-c775afdef05a,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Modelo Tapada das Merces,f60c3d55-a34a-47bd-b236-f24deea3a099,Portugal
+EU,Producer,null,PRD,FMB- Frutas e Horticolas do Barrio,2e9ea944-82c9-4228-9fa4-c4503a119519,Portugal
+EU,Shop / Point of Sale,Sonae,POS,Continente Amadora,eb42f954-2c7e-4e06-8653-2ae5a5168a7a,Portugal
+EU,Producer,null,PRD,"AGRICOLA VILLENA, S.L.",821967a5-f33c-46d3-aae9-087652d7d31b,Spain
