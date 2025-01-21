@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: int_visits_enriched
+    description: >
+      The `int_visits_enriched` model belongs to the intermediate layer of
+      the data pipeline. It is designed to enrich visit data with additional
+      contextual details such as time, location, and associated technology.
+    configs:
+      tags: s06-metrics
+    columns:
+      - name: assetId
+        data_type: STRING
+        description: Identifier for the asset being visited.
+      - name: locationId
+        data_type: STRING
+        description: Unique identifier for the location of the visit.
+      - name: visitId
+        data_type: STRING
+        description: Unique identifier for each visit instance.
+      - name: startTime
+        data_type: TIMESTAMP
+        description: Timestamp marking the start of the visit.
+      - name: endTime
+        data_type: TIMESTAMP
+        description: Timestamp marking the end of the visit.
+      - name: timeZone
+        data_type: STRING
+        description: Time zone in which the visit occurred.
+      - name: dwellTimeDays
+        data_type: DOUBLE
+        description: Duration of the visit expressed in days.
+      - name: region
+        data_type: STRING
+        description: Geographical region where the visit took place.
+      - name: countryName
+        data_type: STRING
+        description: Name of the country where the location is situated.
+      - name: ifcoSystemPartner
+        data_type: STRING
+        description: Indicates if the visit is associated with an IFCO system partner.
+      - name: locationType
+        data_type: STRING
+        description: Type of the location (e.g., retail, warehouse).
+      - name: locationTag
+        data_type: STRING
+        description: Tag associated with the location for categorization.
+      - name: locationName
+        data_type: STRING
+        description: Human-readable name of the location.
+      - name: sensorId
+        data_type: STRING
+        description: Identifier for the sensor tracking the visit.
+      - name: attachedAt
+        data_type: TIMESTAMP
+        description: Timestamp indicating when the sensor was attached.
+      - name: attachedTill
+        data_type: TIMESTAMP
+        description: Timestamp indicating when the sensor was detached.
+      - name: sensorTechnology
+        data_type: STRING
+        description: Type of technology used in the sensor.
