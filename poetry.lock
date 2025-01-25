@@ -590,24 +590,24 @@ typing-extensions = ">=4.4,<5"
 
 [[package]]
 name = "dbt-spark"
-version = "1.8.0"
+version = "1.9.0"
 description = "The Apache Spark adapter plugin for dbt"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "dbt_spark-1.8.0-py3-none-any.whl", hash = "sha256:1f5146b2dae99dac7d9ae1a050fd15dc1da1f7ffe00fbbae53bef17aeec16bc2"},
-    {file = "dbt_spark-1.8.0.tar.gz", hash = "sha256:50ad423ba36617e52fe7539137fc17e5baeef63eb5561809fc4dea26a87dd2fc"},
+    {file = "dbt_spark-1.9.0-py3-none-any.whl", hash = "sha256:f0c945638ac14697b9483de55a70d87a1d41998cc75e7dcecb55cee3f6df6c1b"},
+    {file = "dbt_spark-1.9.0.tar.gz", hash = "sha256:fb81fb1d778433789e9d1ec44a8919b39fb8858be25f3af29ed05e144259f5e3"},
 ]
 
 [package.dependencies]
-dbt-adapters = ">=0.1.0a1,<2.0"
-dbt-common = ">=0.1.0a1,<2.0"
-dbt-core = ">=1.8.0a1"
+dbt-adapters = ">=1.7,<2.0"
+dbt-common = ">=1.10,<2.0"
+dbt-core = ">=1.8.0"
 sqlparams = ">=3.0.0"
 
 [package.extras]
-all = ["PyHive[hive-pure-sasl] (>=0.7.0,<0.8.0)", "pyodbc (>=4.0.39,<4.1.0)", "pyspark (>=3.0.0,<4.0.0)", "thrift (>=0.11.0,<0.17.0)"]
-odbc = ["pyodbc (>=4.0.39,<4.1.0)"]
+all = ["PyHive[hive-pure-sasl] (>=0.7.0,<0.8.0)", "pyodbc (>=5.1.0,<5.2.0)", "pyspark (>=3.0.0,<4.0.0)", "thrift (>=0.11.0,<0.17.0)"]
+odbc = ["pyodbc (>=5.1.0,<5.2.0)"]
 pyhive = ["PyHive[hive-pure-sasl] (>=0.7.0,<0.8.0)", "thrift (>=0.11.0,<0.17.0)"]
 session = ["pyspark (>=3.0.0,<4.0.0)"]
 
@@ -2045,4 +2045,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e35dd4da829f41761ca92f0e61097b4949abeaa89ec77c5d005567c8ffad2a7f"
+content-hash = "edc105e9461c8540db2c788e5643bc0dcba78f0df7f9002760379931a050f5aa"

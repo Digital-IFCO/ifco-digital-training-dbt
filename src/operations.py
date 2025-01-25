@@ -3,10 +3,10 @@ import pyspark.sql.types as t
 from pyspark.sql import DataFrame
 from pyspark.sql.window import Window
 
-from config.columns import ColumnCollection as cc
-from config.params import TimeDeltaDivider, VisitConsolidationSCT, SpecialLocations
+from src.config.columns import ColumnCollection as cc
+from src.config.params import TimeDeltaDivider, VisitConsolidationSCT, SpecialLocations
 
-from utils import calc_time_delta
+from src.utils import calc_time_delta
 
 
 def add_short_unknown_visit_tag(visits: DataFrame) -> DataFrame:
