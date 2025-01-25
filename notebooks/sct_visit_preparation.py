@@ -1,4 +1,24 @@
 # Databricks notebook source
+
+
+import sys
+
+from databricks.sdk.runtime import spark
+
+
+your_user = 'pablo.beamud@ifco.com'
+repo_name = "ifco-digital-training-dbt"
+
+catalog = "training_dbt"
+schema = "dev_pablo"
+
+repo_path = f"/Workspace/Users/{your_user}/{repo_name}/src"
+
+if repo_path not in sys.path:
+    sys.path.append(repo_path)
+
+# COMMAND ----------
+
 import pyspark.sql.functions as f
 
 from src.operations import add_short_unknown_visit_tag, add_visit_grouping_per_asset
@@ -10,8 +30,7 @@ from src.utils import (
 
 # COMMAND ----------
 
-# TODO Read
-visits = ''
+visits = spark.table(f"{catalog}.{schema}.visit_consolidation")
 
 # COMMAND ----------
 
@@ -28,4 +47,4 @@ visits_sct_prepared = calc_dwell_time_days(visits=visits_sct_prepared)
 
 # COMMAND ----------
 
-# TODO Write
+visits_sct_prepared.write.mode("overwrite").saveAsTable(f"{catalog}.{schema}.visits_prepared")
