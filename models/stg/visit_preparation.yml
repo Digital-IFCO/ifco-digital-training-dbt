@@ -59,4 +59,7 @@ models:
         description: Timestamp from which the visit data is valid
         tests:
           - not_null
-
+    tests:
+      - dwell_time_days_max:
+          max_value: 10
+          severity: 'warn'
