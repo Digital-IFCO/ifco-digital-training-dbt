@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: s4_source
+    database: training_dbt
+    schema: s4_schema
+    tables:
+      - name: ex1_source
