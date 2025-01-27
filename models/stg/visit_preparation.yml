@@ -55,11 +55,12 @@ models:
         description: Duration of the visit in days
         tests:
           - not_null
+          - dwell_time_days_max:
+              max_value: 10
+              config:
+                 store_failures: true
+                 severity: 'warn'
       - name: validFrom
         description: Timestamp from which the visit data is valid
         tests:
           - not_null
-    tests:
-      - dwell_time_days_max:
-          max_value: 10
-          severity: 'warn'

@@ -4,21 +4,29 @@
     )
 }}
 
-with visits_enhanced as (select *,
-                                lag(locationId) over (partition by assetId order by endTime) as previousVisitLocationId, lag(endTime) over (partition by assetId order by endTime) as previousVisitEndTime, lead(locationId) over (partition by assetId order by endTime) as nextVisitLocationId, lead(startTime) over (partition by assetId order by endTime) as nextVisitStartTime
-                         from {{ source('visits', 'visit_consolidation') }}),
+with visits_enhanced as
+    (select *,
+            lag(locationId) over (partition by assetId order by endTime) as previousVisitLocationId,
+             lag(endTime) over (partition by assetId order by endTime) as previousVisitEndTime,
+             lead(locationId) over (partition by assetId order by endTime) as nextVisitLocationId,
+             lead(startTime) over (partition by assetId order by endTime) as nextVisitStartTime
+    from {{ source('visits', 'visit_consolidation') }}
+),
 
-     visits_with_delta as (select *,
-                                  datediff(hour, previousVisitEndTime, nextVisitStartTime) as timeDeltaAroundInvalidUnknownHours
-                           from visits_enhanced),
+visits_with_delta as
+    (select *,
+            datediff(hour, previousVisitEndTime, nextVisitStartTime) as timeDeltaAroundInvalidUnknownHours
+    from visits_enhanced
+),
 
-     visits_with_invalid_flags as (select *,
-                                          case
-                                              when previousVisitLocationId = '00000000-0000-0000-0000-000000000000'
-                                                  and
-                                                   lag(previousVisitLocationId) over (partition by assetId order by endTime) = lag(nextVisitLocationId) over (partition by assetId order by endTime)
-                                              and lag(timeDeltaAroundInvalidUnknownHours) over (partition by assetId order by endTime) < 12
-            and lag(dwellTimeDays) over (partition by assetId order by endTime) < 0.5
+ visits_with_invalid_flags as
+     (select *,
+          case
+              when previousVisitLocationId = '00000000-0000-0000-0000-000000000000'
+                  and
+                   lag(previousVisitLocationId) over (partition by assetId order by endTime) = lag(nextVisitLocationId) over (partition by assetId order by endTime)
+              and lag(timeDeltaAroundInvalidUnknownHours) over (partition by assetId order by endTime) < 12
+        and lag(dwellTimeDays) over (partition by assetId order by endTime) < 0.5
     then true
     else false
 end
