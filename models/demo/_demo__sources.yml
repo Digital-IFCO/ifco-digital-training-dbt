@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: visits
-    schema: dev_pablo
-    description: Visits data.
+  - name: demo_visits_data
+    schema: s5_schema
+    description: This have all data from consolidated visits
     tables:
       - name: visit_consolidation
         description: Contains all active visits from the visit table in a consolidated format

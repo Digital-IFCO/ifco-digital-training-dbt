@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: visit_preparation
+  - name: demo__visit_preparation
     description: >
       This model contains visits that have had the invalid unknown visits filtered,
       being this the visits containing sequences of known visits

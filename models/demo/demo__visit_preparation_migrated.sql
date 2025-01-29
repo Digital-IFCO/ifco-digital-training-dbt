@@ -5,7 +5,19 @@
 }}
 
 with visits_enhanced as
-    (select *,
+    (select assetId,
+            visitId,
+            locationId,
+            startTime,
+            endTime,
+            dwellTimeDays,
+            validFrom,
+            sourceFolder,
+            fileDate,
+            timeZone,
+            incomplete,
+            latitude,
+            longitude,
             lag(locationId) over (partition by assetId order by endTime) as previousVisitLocationId,
              lag(endTime) over (partition by assetId order by endTime) as previousVisitEndTime,
              lead(locationId) over (partition by assetId order by endTime) as nextVisitLocationId,
@@ -14,13 +26,46 @@ with visits_enhanced as
 ),
 
 visits_with_delta as
-    (select *,
+    (select assetId,
+            visitId,
+            locationId,
+            startTime,
+            endTime,
+            dwellTimeDays,
+            validFrom,
+            sourceFolder,
+            fileDate,
+            timeZone,
+            incomplete,
+            latitude,
+            longitude,
+            previousVisitLocationId,
+            previousVisitEndTime,
+            nextVisitLocationId,
+            nextVisitStartTime,
             datediff(hour, previousVisitEndTime, nextVisitStartTime) as timeDeltaAroundInvalidUnknownHours
     from visits_enhanced
 ),
 
  visits_with_invalid_flags as
-     (select *,
+     (select assetId,
+            visitId,
+            locationId,
+            startTime,
+            endTime,
+            dwellTimeDays,
+            validFrom,
+            sourceFolder,
+            fileDate,
+            timeZone,
+            incomplete,
+            latitude,
+            longitude,
+            previousVisitLocationId,
+            previousVisitEndTime,
+            nextVisitLocationId,
+            nextVisitStartTime,
+            timeDeltaAroundInvalidUnknownHours,
           case
               when previousVisitLocationId = '00000000-0000-0000-0000-000000000000'
                   and
@@ -35,7 +80,25 @@ as invalidPreviousUnknownVisit
 ),
 
 visits_with_invalid_unknown_visit as (
-    select *,
+    select assetId,
+            visitId,
+            locationId,
+            startTime,
+            endTime,
+            dwellTimeDays,
+            validFrom,
+            sourceFolder,
+            fileDate,
+            timeZone,
+            incomplete,
+            latitude,
+            longitude,
+            previousVisitLocationId,
+            previousVisitEndTime,
+            nextVisitLocationId,
+            nextVisitStartTime,
+            timeDeltaAroundInvalidUnknownHours,
+            invalidPreviousUnknownVisit,
     case
         when lead(invalidPreviousUnknownVisit) over (partition by assetId order by endTime) = 'true'
         then true
