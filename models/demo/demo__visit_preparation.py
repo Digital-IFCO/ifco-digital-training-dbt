@@ -11,7 +11,7 @@ def model(dbt, session):
     #
     # dbt.config(create_notebook=True)
 
-    visits = dbt.source("visits", "visit_consolidation")
+    visits = dbt.source("demo_visits_data", "visit_consolidation")
 
     visits_invalid_unknowns = add_short_unknown_visit_tag(visits=visits)
     visits_without_invalid_unknowns = visits_invalid_unknowns.filter(

@@ -60,4 +60,4 @@ visits_sct_prepared = calc_dwell_time_days(visits=visits_sct_prepared)
 
 # COMMAND ----------
 
-visits_sct_prepared.write.mode("overwrite").saveAsTable(f"{catalog}.{schema}.visits_preparation")
+visits_sct_prepared.write.mode("overwrite").saveAsTable(f"{catalog}.{schema}.visits_preparation_{your_user}")

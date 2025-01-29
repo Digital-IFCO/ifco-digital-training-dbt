@@ -22,7 +22,7 @@ with visits_enhanced as
              lag(endTime) over (partition by assetId order by endTime) as previousVisitEndTime,
              lead(locationId) over (partition by assetId order by endTime) as nextVisitLocationId,
              lead(startTime) over (partition by assetId order by endTime) as nextVisitStartTime
-    from {{ source('visits', 'visit_consolidation') }}
+    from {{ source('demo_visits_data', 'visit_consolidation') }}
 ),
 
 visits_with_delta as
