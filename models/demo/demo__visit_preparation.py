@@ -8,8 +8,6 @@ from src.utils import (
 
 
 def model(dbt, session):
-    #
-    # dbt.config(create_notebook=True)
 
     visits = dbt.source("demo_visits_data", "visit_consolidation")
 
