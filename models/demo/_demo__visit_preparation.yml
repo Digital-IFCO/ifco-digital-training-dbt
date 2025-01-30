@@ -55,7 +55,7 @@ models:
         description: Duration of the visit in days
         tests:
           - not_null
-          - dwell_time_days_max:
+          - column_greater_than:
               max_value: 10
               config:
                  store_failures: true

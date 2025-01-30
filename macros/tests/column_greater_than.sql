@@ -1,4 +1,4 @@
-{% test dwell_time_days_max(model, column_name, max_value) %}
+{% test column_greater_than(model, column_name, max_value) %}
 
 /*
   This test checks that no records in the specified model have a `dwellTimeDays` value exceeding `max_value`.
@@ -7,7 +7,7 @@
 
 with violations as (select locationId,
                            visitId,
-                           dwellTimeDays
+                           {{ column_name }}
                     from {{ model }}
                     where {{ column_name }} > {{ max_value }})
 
