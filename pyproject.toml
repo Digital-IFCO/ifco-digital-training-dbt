@@ -7,10 +7,8 @@ authors = [
     "franramb francisco.malpica@ifco.com"
 ]
 readme = "README.md"
-package-mode = true
-packages = [
-    { include = "src" },
-]
+package-mode = false
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
