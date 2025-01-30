@@ -6,7 +6,7 @@ import sys
 from databricks.sdk.runtime import spark
 
 
-your_user = 'pablo.beamud@ifco.com'
+your_user = ''
 repo_name = "ifco-digital-training-dbt"
 
 catalog = "training_dbt"
