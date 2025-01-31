@@ -1,0 +1,15 @@
+unit_tests:
+  - name: test_sales_category
+    description: "Check sales_category column. If total_sales is greater than 100000, then sales_category is 'High'. If total_sales is greater than 50000, then sales_category is 'Medium'. Otherwise, sales_category is 'Low'."
+    model: mart_agg_sales
+    given:
+      - input: ref('int_retailer_sales')
+        rows:
+          - {customer_name: a, country: USA, total_sales: 105000}
+          - {customer_name: a, country: MEX, total_sales: 50500}
+          - {customer_name: b, country: ESP, total_sales: 10500}
+    expect:
+      rows:
+        - {customer_name: a, country: USA, sales_category: High}
+        - {customer_name: a, country: MEX, sales_category: Medium}
+        - {customer_name: b, country: ESP, sales_category: Low}
