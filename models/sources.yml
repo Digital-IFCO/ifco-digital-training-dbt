@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: big_mart
+    database: training_dbt  
+    schema: pyspark_dbt_sql_models  
+    tables:
+      - name: source_big_mart_mrp
+  - name: retailer
+    database: training_dbt  
+    schema: pyspark_dbt_sql_models  
+    tables:
+      - name: source_retailer_sales
