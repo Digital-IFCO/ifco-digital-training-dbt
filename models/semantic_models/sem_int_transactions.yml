@@ -1,0 +1,62 @@
+version: 2
+
+semantic_models:
+  - name: transactions
+    model: ref('int_transactions')
+    description: "Semantic model for Sonae transaction data"
+
+    defaults:
+      agg_time_dimension: transaction_start_time
+
+    entities:
+      - name: transaction
+        type: primary
+        expr: "transactionId"
+
+      - name: asset
+        type: foreign
+        expr: "assetId"
+
+    dimensions:
+      - name: transaction_start_time
+        type: time
+        expr: "senderDepartureTime"
+        type_params:
+          time_granularity: day
+
+      - name: transaction_pattern
+        type: categorical
+        expr: "concat(COALESCE(senderLocationTag, 'UKN'), ' -> ', COALESCE(receiverLocationTag, 'UKN'))"
+
+      - name: transaction_transit_time
+        type: categorical
+        expr: "transactionTransitTime"
+
+      - name: sender_location_type
+        type: categorical
+        expr: "senderLocationType"
+
+      - name: sender_location_tag
+        type: categorical
+        expr: "COALESCE(senderLocationTag, 'UKN')"
+
+      - name: receiver_location_tag
+        type: categorical
+        expr: "COALESCE(receiverLocationTag, 'UKN')"
+
+
+    # types of measures: sum, min, max, avg, sum_bool, count_distinct, median, percentile
+
+    # lets build some measures so we can answer the following questions:
+    # What are the top 10 transactions to unknown locations Within a given time period?
+    # What are the top 10 assets with the highest average transit time within a given time period?
+    measures:
+      - name: number_of_transactions
+        description: "Count of transactions"
+        agg: sum
+        expr: "1"
+
+      - name: avg_transit_time
+        description: "Average transit time"
+        agg: average
+        expr: "transactionTransitTime"

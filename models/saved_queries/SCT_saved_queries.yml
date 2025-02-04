@@ -1,0 +1,37 @@
+saved_queries:
+  # equivalent MetricFlow command: mf query --metrics number_of_transactions --where "{{ Dimension('transaction__receiver_location_tag') }} = 'UKN' AND {{ TimeDimension('transaction__transaction_start_time', 'day') }} <= now() AND {{ TimeDimension('transaction__transaction_start_time', 'day') }} >= dateadd(MONTH, -3, now())" --group-by transaction__transaction_pattern --order -number_of_transactions --limit 10
+  - name: top_10_transactions_to_unknowns
+    description: "Count of Top 10 transaction patterns with unknown locations as receivers in the last 3 months."
+    label: Transactions to unknown locations
+    query_params:
+      metrics:
+        - number_of_transactions
+      group_by:
+        - Dimension('transaction__transaction_pattern')
+      where:
+        - "{{ Dimension('transaction__receiver_location_tag') }} = 'UKN'"
+        - "{{ TimeDimension('transaction__transaction_start_time', 'day') }} <= now()"
+        - "{{ TimeDimension('transaction__transaction_start_time', 'day') }} >= dateadd(MONTH, -3, now())"
+      order_by:
+        - Metric('number_of_transactions')
+      limit: 10
+
+  # equivalent MetricFlow command: mf query --metrics avg_transit_time --where "{{ TimeDimension('transaction__transaction_start_time', 'day') }} <= now() AND {{ TimeDimension('transaction__transaction_start_time', 'day') }} >= dateadd(MONTH, -3, now())" --group-by asset --order -avg_transit_time --limit 10
+  - name: top_10_avg_transit_time_by_asset
+    description: "Count of top 10 assets with the longest transit time average in the last 3 months."
+    label: Transactions to unknown locations
+    query_params:
+      metrics:
+        - avg_transit_time
+      group_by:
+        - Entity('asset')
+      where:
+        - "{{ TimeDimension('transaction__transaction_start_time', 'day') }} <= now()"
+        - "{{ TimeDimension('transaction__transaction_start_time', 'day') }} >= dateadd(MONTH, -3, now())"
+      order_by:
+        - Metric('avg_transit_time')
+      limit: 10 
+
+  # With saved queries setup, we can just execute "mf query --saved-queries <saved_query_name>"
+
+  # we can also add the --csv <csv_name.csv> as a flag to directly export the results from MetricFlow into a CSV

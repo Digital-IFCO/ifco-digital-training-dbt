@@ -1,0 +1,15 @@
+transactionId,senderLocationTag,receiverLocationTag,transactionType,region,partner,senderLocationGroupId,receiverLocationGroupId
+1,PRD,DC,Typical,Europe,Sonae,NULL,NULL
+2,DC,POS,Typical,Europe,Sonae,NULL,NULL
+3,POS,POS,Typical,Europe,Sonae,2,1
+4,POS,DC,Typical,Europe,Sonae,NULL,NULL
+5,DC,DC,Typical,Europe,Sonae,NULL,NULL
+6,DC,PRD,Typical,Europe,Sonae,NULL,NULL
+7,DC,SC,Typical,Europe,Sonae,NULL,NULL
+8,PRD,POS,Typical,Europe,Sonae,NULL,NULL
+9,DC,POS,Typical,Europe,Dia,NULL,NULL
+10,POS,DC,Typical,Europe,Dia,NULL,NULL
+11,DC,PRD,Typical,Europe,Dia,3,4
+12,PRD,DC,Typical,Europe,Dia,NULL,NULL
+13,DC,DC,Typical,Europe,Dia,NULL,NULL
+14,DC,SC,Typical,Europe,Dia,NULL,NULL

@@ -1,0 +1,23 @@
+# Now we create metrics that use the measures previously defined.
+# Witht hese metrics we can do dynamic queries using MetricFlow with the assistance
+# of entities and dimensions.
+
+# These same queries done in MetricFlow can be saved to saved_queries. 
+# Check SCT_saved_queries.yml to check both the MetricFlow command and the equivalent saved_query.
+
+metrics:
+  # What are the top 10 transactions to unknown locations Within a given time period?
+  - name: number_of_transactions
+    description: The number of transactions
+    type: simple
+    label: count of transactions
+    type_params:
+      measure: number_of_transactions
+
+  # What are the top 10 assets with the highest average transit time within a given time period?
+  - name: avg_transit_time
+    label: "Average Transaction Transit Time"
+    type: simple
+    description: "Average transit time"
+    type_params:
+      measure: avg_transit_time

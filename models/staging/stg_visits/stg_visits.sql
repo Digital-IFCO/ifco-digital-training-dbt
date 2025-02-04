@@ -8,10 +8,12 @@ WITH
             visitId,
 
             -- datetime columns
-            CAST(startTime AS TIMESTAMP) AS startTime,
-            CAST(endTime AS TIMESTAMP) AS endTime,
+            CAST(arrivalTime AS TIMESTAMP) AS arrivalTime,
+            CAST(departureTime AS TIMESTAMP) AS departureTime,
 
             -- dimensions
+            longitude,
+            latitude,
             timeZone,
             dwellTimeDays
         FROM {{ ref('visits') }}

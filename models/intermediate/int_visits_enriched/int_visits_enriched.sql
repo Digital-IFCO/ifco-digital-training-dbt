@@ -7,8 +7,10 @@ WITH
             assetId,
             locationId,
             visitId,
-            startTime,
-            endTime,
+            arrivalTime,
+            departureTime,
+            longitude,
+            latitude,
             timeZone,
             dwellTimeDays
         FROM {{ ref('stg_visits') }}
@@ -59,8 +61,8 @@ WITH
         FROM visits_enriched_with_location_data v
         LEFT JOIN staged_sensors s ON v.assetId = s.assetId
         WHERE 
-            v.startTime >= s.attachedAt
-            AND v.endTime <= s.attachedTill
+            v.arrivalTime >= s.attachedAt
+            AND v.departureTime <= s.attachedTill
     ),
 
     visits_enriched AS (
@@ -74,14 +76,17 @@ WITH
             locationTag,
             locationName,
             ifcoSystemPartner,
-            startTime,
-            endTime,
+            arrivalTime,
+            departureTime,
+            longitude,
+            latitude,
             timeZone,
             dwellTimeDays,
             sensorId,
             attachedAt,
             attachedTill,
             sensorTechnology
+        FROM visits_enriched_with_scanner_data
     )
 
-SELECT * FROM visits_enriched_with_scanner_data
+SELECT * FROM visits_enriched

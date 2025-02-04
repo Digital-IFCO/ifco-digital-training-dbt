@@ -1,9 +1,0 @@
-segmentId,startLocation,endLocation,segmentType,region,partner,startGroupId,endGroupId
-1,PRD,DC,Typical,Europe,Sonae,NULL,NULL
-2,DC,POS,Typical,Europe,Sonae,NULL,NULL
-3,POS,POS,Typical,Europe,Sonae,NULL,NULL
-4,POS,DC,Typical,Europe,Sonae,NULL,NULL
-5,DC,DC,Typical,Europe,Sonae,NULL,NULL
-6,DC,PRD,Typical,Europe,Sonae,NULL,NULL
-7,DC,SC,Typical,Europe,Sonae,NULL,NULL
-8,PRD,POS,Typical,Europe,Sonae,NULL,NULL

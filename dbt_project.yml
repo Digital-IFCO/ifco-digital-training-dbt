@@ -21,23 +21,16 @@ models:
       +schema: staging
       +docs:
         node_color: green
-
     intermediate:
       +schema: intermediate
       +docs:
         node_color: "red"
     mart:
       +schema: mart
-      +docs:
-        node_color: "AE2012"
+    utils:
+      +schema: utils
 
 seeds:
   +schema: seeds
   +docs:
     node_color: "blue"
-
-sources:
-  +materialized: table
-  +schema: seeds
-  +docs:
-    node_color: "cyan"
