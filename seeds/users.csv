@@ -1,0 +1,5 @@
+id,user_name,email,status,updated_at
+1,Alice Johnson,alice@example.com,active,2025-02-18T13:58:09.409+00:00
+2,Bob Smith,bob@example.com,inactive,2025-02-18T13:58:09.409+00:00
+3,Charlie Brown,charlie@example.com,active,2025-02-18T13:58:09.409+00:00
+4,David Johnson,david@example.com,active,2025-02-18T13:58:09.409+00:00

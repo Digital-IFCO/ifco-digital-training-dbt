@@ -1,0 +1,9 @@
+snapshots:
+  - name: users_snapshot_timestamp
+    relation: ref('users')
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: timestamp
+      updated_at: updated_at
+      dbt_valid_to_current: "to_date('9999-12-31')"
