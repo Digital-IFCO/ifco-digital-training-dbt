@@ -10,8 +10,12 @@ The included setup instructions are a quick start to ensure your development env
 
 #### Step 1:
 
-**[INSTALL PROJECT DEPENDENCIES USING UV](docs/INSTALL_DEPENDENCIES_USING_UV.md)**
+**[INSTALL PYTHON USING PYENV](docs/INSTALL_PYTHON.md)**
 
 #### Step 2:
+
+**[INSTALL POETRY](docs/INSTALL_POETRY.md)**
+
+#### Step 3:
 
 **[CONFIGURE IDE](docs/CONFIGURE_IDE.md)**
